@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 4051738813979428}
   - component: {fileID: 61314622839644144}
   - component: {fileID: 50686573353057148}
-  - component: {fileID: 114803270669724928}
+  - component: {fileID: 5776074756005790301}
   m_Layer: 0
   m_Name: Spawn Point
   m_TagString: SpawnPoint
@@ -509,7 +509,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114803270669724928
+--- !u!114 &5776074756005790301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -518,12 +518,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1242750935554888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c57afa11372d564aad59cf02d01cec7, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8e34b2d7e61f44dabef179db3711b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 3
+  openingDirection: 0
   spawned: 0
-  waitTime: 10
+  waitTime: 20
 --- !u!1 &1332240857502328
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 4118959086132692}
   - component: {fileID: 61725516638981578}
   - component: {fileID: 50502005124495256}
-  - component: {fileID: 114675691122503930}
+  - component: {fileID: 368963778455983672}
   m_Layer: 0
   m_Name: Spawn Point (1)
   m_TagString: SpawnPoint
@@ -899,7 +899,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114675691122503930
+--- !u!114 &368963778455983672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -908,12 +908,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442174533054866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c57afa11372d564aad59cf02d01cec7, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8e34b2d7e61f44dabef179db3711b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 4
+  openingDirection: 0
   spawned: 0
-  waitTime: 10
+  waitTime: 20
 --- !u!1 &1552933145951124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4308900632172778}
-  - component: {fileID: 114649445130249852}
+  - component: {fileID: 78791663438714961}
   m_Layer: 0
   m_Name: LR
   m_TagString: Untagged
@@ -1152,7 +1152,7 @@ Transform:
   - {fileID: 4278812518008938}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114649445130249852
+--- !u!114 &78791663438714961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1161,6 +1161,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982205314345556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 574b113a1431ad2489b46dd20fdf7dc6, type: 3}
+  m_Script: {fileID: 11500000, guid: f31709e84711ebc4a8dfb29e2a303f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

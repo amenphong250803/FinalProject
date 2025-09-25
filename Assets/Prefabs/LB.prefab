@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4138568750343560}
-  - component: {fileID: 114235908888845704}
+  - component: {fileID: 7151488357519787647}
   m_Layer: 0
   m_Name: LB
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 4237152270570112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -270}
---- !u!114 &114235908888845704
+--- !u!114 &7151488357519787647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144202486990382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 574b113a1431ad2489b46dd20fdf7dc6, type: 3}
+  m_Script: {fileID: 11500000, guid: f31709e84711ebc4a8dfb29e2a303f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1152644564881294
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 4877820775549588}
   - component: {fileID: 61895692263711518}
   - component: {fileID: 50430430335294202}
-  - component: {fileID: 114951938987334250}
+  - component: {fileID: 1641012846099663908}
   m_Layer: 0
   m_Name: Spawn Point (2)
   m_TagString: SpawnPoint
@@ -421,7 +421,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114951938987334250
+--- !u!114 &1641012846099663908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -430,10 +430,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1229370745027258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c57afa11372d564aad59cf02d01cec7, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8e34b2d7e61f44dabef179db3711b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 4
+  openingDirection: 0
   spawned: 0
   waitTime: 10
 --- !u!1 &1291089247763418
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 4069250502683656}
   - component: {fileID: 61078610218222682}
   - component: {fileID: 50057108866314364}
-  - component: {fileID: 114131041848646834}
+  - component: {fileID: 93022358270753852}
   m_Layer: 0
   m_Name: Spawn Point (1)
   m_TagString: SpawnPoint
@@ -576,7 +576,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114131041848646834
+--- !u!114 &93022358270753852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -585,10 +585,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1483970114227196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c57afa11372d564aad59cf02d01cec7, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8e34b2d7e61f44dabef179db3711b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 2
+  openingDirection: 0
   spawned: 0
   waitTime: 10
 --- !u!1 &1565319679277540

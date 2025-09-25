@@ -545,10 +545,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4155463238886156}
-  - component: {fileID: 114143509828993844}
   - component: {fileID: 61114000244390268}
   - component: {fileID: 50273649362926876}
-  - component: {fileID: 114986256263661632}
+  - component: {fileID: 3285462204807214779}
   m_Layer: 0
   m_Name: Spawn Point (1)
   m_TagString: SpawnPoint
@@ -571,21 +570,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4327155049126624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114143509828993844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348614620759040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c57afa11372d564aad59cf02d01cec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openingDirection: 0
-  spawned: 0
-  waitTime: 10
 --- !u!61 &61114000244390268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -659,7 +643,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114986256263661632
+--- !u!114 &3285462204807214779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -668,12 +652,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1348614620759040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c57afa11372d564aad59cf02d01cec7, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8e34b2d7e61f44dabef179db3711b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 3
+  openingDirection: 0
   spawned: 0
-  waitTime: 10
+  waitTime: 20
 --- !u!1 &1525034897592524
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,10 +667,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4512321710156788}
-  - component: {fileID: 114848109281707408}
   - component: {fileID: 61537387638641232}
   - component: {fileID: 50799483987210596}
-  - component: {fileID: 114234234751969120}
+  - component: {fileID: 9221132176105528187}
   m_Layer: 0
   m_Name: Spawn Point
   m_TagString: SpawnPoint
@@ -709,21 +692,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4327155049126624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114848109281707408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525034897592524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c57afa11372d564aad59cf02d01cec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openingDirection: 0
-  spawned: 0
-  waitTime: 10
 --- !u!61 &61537387638641232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -797,7 +765,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114234234751969120
+--- !u!114 &9221132176105528187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -806,12 +774,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1525034897592524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c57afa11372d564aad59cf02d01cec7, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8e34b2d7e61f44dabef179db3711b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 1
+  openingDirection: 0
   spawned: 0
-  waitTime: 10
+  waitTime: 20
 --- !u!1 &1709453575458850
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4327155049126624}
-  - component: {fileID: 114374636628678932}
+  - component: {fileID: 6752847152325697966}
   m_Layer: 0
   m_Name: TR
   m_TagString: Untagged
@@ -847,7 +815,7 @@ Transform:
   - {fileID: 4155463238886156}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &114374636628678932
+--- !u!114 &6752847152325697966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -856,7 +824,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1709453575458850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 574b113a1431ad2489b46dd20fdf7dc6, type: 3}
+  m_Script: {fileID: 11500000, guid: f31709e84711ebc4a8dfb29e2a303f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1711583714526944
