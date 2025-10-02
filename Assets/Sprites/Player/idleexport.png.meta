@@ -1,34 +1,37 @@
 fileFormatVersion: 2
-guid: 118d5244c990f354585ca836ad8706d4
+guid: b138cbe69c0cc7b4d96975ba37f891b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6135136492655285186
-    second: Player Run-Sheet_0
+      213: -8783426364704928755
+    second: idleexport_0
   - first:
-      213: 5217156571561035020
-    second: Player Run-Sheet_1
+      213: 1403537138614351424
+    second: idleexport_1
   - first:
-      213: 4474905869054315846
-    second: Player Run-Sheet_2
+      213: -8674583620470482451
+    second: idleexport_2
   - first:
-      213: 5451247005471311391
-    second: Player Run-Sheet_3
+      213: 5976744964582764385
+    second: idleexport_3
   - first:
-      213: 4833127082406739318
-    second: Player Run-Sheet_4
+      213: -7350298895039264601
+    second: idleexport_4
   - first:
-      213: -398681130698942530
-    second: Player Run-Sheet_5
+      213: 957286057510848914
+    second: idleexport_5
   - first:
-      213: 4917291197315059624
-    second: Player Run-Sheet_6
+      213: 2170854947717686911
+    second: idleexport_6
   - first:
-      213: -4815960664409167149
-    second: Player Run-Sheet_7
+      213: 2847159104365116672
+    second: idleexport_7
   - first:
-      213: -5911574373377601954
-    second: Player Run-Sheet_8
+      213: -6130738261319580241
+    second: idleexport_8
+  - first:
+      213: -2933393697355864802
+    second: idleexport_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,199 +127,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Run-Sheet_0
+      name: idleexport_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 1
-        width: 24
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c3114d7222642550800000000000000
-      internalID: 6135136492655285186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player Run-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 58
+        x: 11
         y: 0
-        width: 26
-        height: 35
+        width: 25
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c058d799240176840800000000000000
-      internalID: 5217156571561035020
+      spriteID: d0c46f402400b1680800000000000000
+      internalID: -8783426364704928755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Run-Sheet_2
+      name: idleexport_1
       rect:
         serializedVersion: 2
-        x: 108
+        x: 52
         y: 0
-        width: 22
-        height: 35
+        width: 25
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64d0b48cd2f0a1e30800000000000000
-      internalID: 4474905869054315846
+      spriteID: 0463d20679d5a7310800000000000000
+      internalID: 1403537138614351424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Run-Sheet_3
+      name: idleexport_2
       rect:
         serializedVersion: 2
-        x: 158
+        x: 93
         y: 0
-        width: 16
-        height: 35
+        width: 25
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1687000548b6ab40800000000000000
-      internalID: 5451247005471311391
+      spriteID: de95f673820bd9780800000000000000
+      internalID: -8674583620470482451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Run-Sheet_4
+      name: idleexport_3
       rect:
         serializedVersion: 2
-        x: 206
+        x: 134
         y: 0
-        width: 19
-        height: 35
+        width: 25
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67d7c257977b21340800000000000000
-      internalID: 4833127082406739318
+      spriteID: 16f6f0f01e9a1f250800000000000000
+      internalID: 5976744964582764385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Run-Sheet_5
+      name: idleexport_4
       rect:
         serializedVersion: 2
-        x: 252
-        y: 1
-        width: 23
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb7d90abf99977af0800000000000000
-      internalID: -398681130698942530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player Run-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 300
+        x: 175
         y: 0
-        width: 23
-        height: 35
+        width: 25
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8af8e118a4abd3440800000000000000
-      internalID: 4917291197315059624
+      spriteID: 7a80d38391e7ef990800000000000000
+      internalID: -7350298895039264601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Run-Sheet_7
+      name: idleexport_5
       rect:
         serializedVersion: 2
-        x: 348
+        x: 216
         y: 0
-        width: 22
-        height: 35
+        width: 25
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3da23a1ba454a2db0800000000000000
-      internalID: -4815960664409167149
+      spriteID: 2994e5ee896f84d00800000000000000
+      internalID: 957286057510848914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Run-Sheet_8
+      name: idleexport_6
       rect:
         serializedVersion: 2
-        x: 398
+        x: 257
         y: 0
-        width: 19
-        height: 35
+        width: 25
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5e8683ad6ed5fda0800000000000000
-      internalID: -5911574373377601954
+      spriteID: f76ac91c21d602e10800000000000000
+      internalID: 2170854947717686911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleexport_7
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00db3bade14238720800000000000000
+      internalID: 2847159104365116672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleexport_8
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 0
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5862b880e3beaa0800000000000000
+      internalID: -6130738261319580241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleexport_9
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e15ebba59fd7a47d0800000000000000
+      internalID: -2933393697355864802
       vertices: []
       indices: 
       edges: []
@@ -325,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1cb7d73191ede4a429090e054461de24
     internalID: 0
     vertices: []
     indices: 
@@ -335,15 +360,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Player Run-Sheet_0: 6135136492655285186
-      Player Run-Sheet_1: 5217156571561035020
-      Player Run-Sheet_2: 4474905869054315846
-      Player Run-Sheet_3: 5451247005471311391
-      Player Run-Sheet_4: 4833127082406739318
-      Player Run-Sheet_5: -398681130698942530
-      Player Run-Sheet_6: 4917291197315059624
-      Player Run-Sheet_7: -4815960664409167149
-      Player Run-Sheet_8: -5911574373377601954
+      idleexport_0: -8783426364704928755
+      idleexport_1: 1403537138614351424
+      idleexport_2: -8674583620470482451
+      idleexport_3: 5976744964582764385
+      idleexport_4: -7350298895039264601
+      idleexport_5: 957286057510848914
+      idleexport_6: 2170854947717686911
+      idleexport_7: 2847159104365116672
+      idleexport_8: -6130738261319580241
+      idleexport_9: -2933393697355864802
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
