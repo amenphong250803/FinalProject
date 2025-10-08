@@ -2,44 +2,68 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Movement")]
-    public float moveSpeed = 8f;
-    public float jumpForce = 16f;
-
-    [Header("Ground Check")]
-    public Transform groundCheck;
-    public float checkRadius = 0.2f;
-    public LayerMask groundLayer;
-
+    public float speed = 10f; // Tốc độ chạy
+    public float jumpForce = 10f; // Lực nhảy
     private Rigidbody2D rb;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private bool isGrounded;
-    private float moveInput;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Debug components
+        if (rb == null) Debug.LogError("Rigidbody2D missing!");
+        if (animator == null) Debug.LogError("Animator missing!");
+        if (spriteRenderer == null) Debug.LogError("SpriteRenderer missing!");
     }
 
     void Update()
     {
-        // Nhận input ngang (A/D hoặc ←/→)
-        moveInput = Input.GetAxisRaw("Horizontal");
-        if (moveInput > 0) transform.localScale = new Vector3(1, 1, 1);
-        else if (moveInput < 0) transform.localScale = new Vector3(-1, 1, 1);
+        // Di chuyển
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
 
-        // Kiểm tra có đang đứng trên ground không
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        // Flip sprite
+        if (moveInput > 0)
+            spriteRenderer.flipX = false;
+        else if (moveInput < 0)
+            spriteRenderer.flipX = true;
+
+        // Animation
+        animator.SetBool("isRunning", moveInput != 0);
+        animator.SetBool("isJumping", !isGrounded); // Trigger nhảy khi không chạm đất
 
         // Nhảy
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            Debug.Log("Jump triggered!");
+            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            isGrounded = false;
+        }
+
+        // Debug trạng thái
+        Debug.Log("isGrounded: " + isGrounded + ", Velocity Y: " + rb.linearVelocity.y);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+            Debug.Log("Landed on Ground");
         }
     }
 
-    void FixedUpdate()
+    void OnCollisionExit2D(Collision2D collision)
     {
-        // Di chuyển ngang
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+            Debug.Log("Left Ground");
+        }
     }
 }
