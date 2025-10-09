@@ -2,77 +2,74 @@
 
 public class EnemyPatrol : MonoBehaviour
 {
-    [Header("Patrol Points")]
-    [SerializeField] private Transform leftEdge;
-    [SerializeField] private Transform rightEdge;
+    [Header("Movement Settings")]
+    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private float groundCheckDistance = 1f;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Transform groundCheck;
 
-    [Header("Enemy")]
-    [SerializeField] private Transform enemy;
-
-    [Header("Movement parameters")]
-    [SerializeField] private float speed = 2f;
-
-    [Header("Idle behavior")]
-    [SerializeField] private float idleDuration = 2f;
-    private float idleTimer;
-
-    private Vector3 initScale;
-    private bool movingLeft; 
+    private bool movingLeft = true;
+    private Animator anim;
+    private bool isDead;
 
     private void Awake()
     {
-        initScale = enemy.localScale;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        if (isDead) return;
+        Patrol();
+    }
+
+    private void Patrol()
+    {
+        anim.SetBool("Moving", true);
+
+        // 🟢 Dịch chuyển theo hướng local (không bị cố định hướng)
+        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime, Space.Self);
+
+        // Kiểm tra mặt đất
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
+
+        if (groundInfo.collider == false)
+        {
+            Flip();
+        }
+    }
+
+    private void Flip()
+    {
+        movingLeft = !movingLeft;
+
         if (movingLeft)
-        {
-            // Nếu chưa chạm mép trái → tiếp tục đi trái
-            if (enemy.position.x >= leftEdge.position.x)
-                MoveInDirection(-1);
-            else
-                ChangeDirection();
-        }
+            transform.eulerAngles = new Vector3(0, 0, 0);
         else
-        {
-            // Nếu chưa chạm mép phải → tiếp tục đi phải
-            if (enemy.position.x <= rightEdge.position.x)
-                MoveInDirection(1);
-            else
-                ChangeDirection();
-        }
+            transform.eulerAngles = new Vector3(0, 180, 0);
     }
 
-    private void ChangeDirection()
+    public void TakeHit()
     {
-        // Đứng lại 1 chút rồi đổi hướng
-        idleTimer += Time.deltaTime;
-        if (idleTimer > idleDuration)
-        {
-            movingLeft = !movingLeft;
-            idleTimer = 0;
-        }
+        if (isDead) return;
+        anim.SetTrigger("Hurt");
     }
 
-    private void MoveInDirection(int direction)
+    public void Die()
     {
-        idleTimer = 0;
+        if (isDead) return;
+        isDead = true;
 
-        // Quay mặt theo hướng di chuyển
-        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
-
-        // Di chuyển enemy
-        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * direction * speed, enemy.position.y, enemy.position.z);
+        anim.SetBool("Moving", false);
+        anim.SetBool("Die", true);
+        Destroy(gameObject, 2f);
     }
 
-    // Hiển thị vùng patrol trong Scene
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
-        if (leftEdge != null && rightEdge != null)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(leftEdge.position, rightEdge.position);
-        }
+        if (groundCheck == null) return;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(groundCheck.position, groundCheck.position + Vector3.down * groundCheckDistance);
     }
 }
