@@ -2,74 +2,87 @@
 
 public class EnemyPatrol : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] private float groundCheckDistance = 1f;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform groundCheck;
+    public Transform leftPoint;
+    public Transform rightPoint;
+    public float speed = 2f;
 
-    private bool movingLeft = true;
-    private Animator anim;
-    private bool isDead;
+    public float chaseRange = 4f;      // phạm vi phát hiện player
+    private Transform player;
 
-    private void Awake()
+    private Rigidbody2D rb;
+    private bool movingRight = true;
+    private Vector3 originalScale;
+
+    private EnemyHealth hp;
+
+    void Start()
     {
-        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
+
+        hp = GetComponent<EnemyHealth>();
+
+        leftPoint.parent = null;
+        rightPoint.parent = null;
+
+        originalScale = transform.localScale;
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void Update()
+    void Update()
     {
-        if (isDead) return;
-        Patrol();
-    }
-
-    private void Patrol()
-    {
-        anim.SetBool("Moving", true);
-
-        // 🟢 Dịch chuyển theo hướng local (không bị cố định hướng)
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime, Space.Self);
-
-        // Kiểm tra mặt đất
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
-
-        if (groundInfo.collider == false)
+        if (hp.currentHP <= 0)
         {
-            Flip();
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        float distance = Vector2.Distance(transform.position, player.position);
+
+        if (distance <= chaseRange)
+            ChasePlayer();
+        else
+            Patrol();
+    }
+
+    void Patrol()
+    {
+        if (movingRight)
+        {
+            rb.linearVelocity = new Vector2(speed, 0);
+
+            transform.localScale = new Vector3(
+                Mathf.Abs(originalScale.x), originalScale.y, originalScale.z
+            );
+
+            if (transform.position.x >= rightPoint.position.x)
+                movingRight = false;
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(-speed, 0);
+
+            transform.localScale = new Vector3(
+                -Mathf.Abs(originalScale.x), originalScale.y, originalScale.z
+            );
+
+            if (transform.position.x <= leftPoint.position.x)
+                movingRight = true;
         }
     }
 
-    private void Flip()
+    void ChasePlayer()
     {
-        movingLeft = !movingLeft;
-
-        if (movingLeft)
-            transform.eulerAngles = new Vector3(0, 0, 0);
+        if (player.position.x > transform.position.x)
+        {
+            rb.linearVelocity = new Vector2(speed * 1.2f, 0);
+            transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+        }
         else
-            transform.eulerAngles = new Vector3(0, 180, 0);
-    }
-
-    public void TakeHit()
-    {
-        if (isDead) return;
-        anim.SetTrigger("Hurt");
-    }
-
-    public void Die()
-    {
-        if (isDead) return;
-        isDead = true;
-
-        anim.SetBool("Moving", false);
-        anim.SetBool("Die", true);
-        Destroy(gameObject, 2f);
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (groundCheck == null) return;
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(groundCheck.position, groundCheck.position + Vector3.down * groundCheckDistance);
+        {
+            rb.linearVelocity = new Vector2(-speed * 1.2f, 0);
+            transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+        }
     }
 }

@@ -2,50 +2,40 @@
 
 public class EnemyAttack : MonoBehaviour
 {
-    [SerializeField] private float attackCooldown;
-    [SerializeField] private float range;
-    [SerializeField] private float colliderDistance;
-    [SerializeField] private int damage;
-    [SerializeField] private BoxCollider2D boxCollider;
-    [SerializeField] private LayerMask playerLayer;
-    private float cooldownTimer = Mathf.Infinity;
+    public int damage = 10;
+    public float attackRange = 1.5f;
+    public float attackCooldown = 1f;
 
-    private Animator anim;
+    private float lastAttack = 0f;
+    private Transform player;
+    private EnemyHealth hp;
 
-    private void Awake()
+    void Start()
     {
-        anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        hp = GetComponent<EnemyHealth>();
     }
 
-    private void Update()
+    void Update()
     {
-        cooldownTimer += Time.deltaTime;
-        if (PlayerInSight())
-        {
-            if (cooldownTimer >= attackCooldown) 
-            {
-                cooldownTimer = 0;
-                anim.SetTrigger("Attack");
-            }
+        if (hp.currentHP <= 0) return;
 
+        float dist = Vector2.Distance(transform.position, player.position);
+
+        if (dist <= attackRange)
+        {
+            if (Time.time >= lastAttack + attackCooldown)
+            {
+                lastAttack = Time.time;
+
+                PlayerHealth ph = player.GetComponent<PlayerHealth>();
+                if (ph != null)
+                {
+                    ph.TakeDamage(damage);
+                    Debug.Log("Enemy did damage! Player HP = " + ph.currentHP);
+                }
+                else Debug.Log("PlayerHealth NOT FOUND!");
+            }
         }
     }
-
-    private bool PlayerInSight()
-    {
-        RaycastHit2D hit = 
-            Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
-            0, Vector2.left, 0, playerLayer);
-
-        return hit.collider != null;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
-    }
-
 }

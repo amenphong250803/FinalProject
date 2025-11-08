@@ -5,8 +5,8 @@ namespace ClearSky
     public class SimplePlayerController : MonoBehaviour
     {
         [Header("Movement")]
-        public float movePower = 10f;
-        public float jumpPower = 15f; // Set gravity scale = 5
+        public float movePower = 6f;
+        public float jumpPower = 12f;
 
         [Header("Ground Check")]
         public Transform groundCheck;
@@ -14,15 +14,23 @@ namespace ClearSky
         public LayerMask groundLayer;
         private bool isGrounded;
 
+        [Header("Attack")]
+        public GameObject hitbox;     // <-- QUAN TRỌNG: phải gán object này trong Inspector
+
         private Rigidbody2D rb;
         private Animator anim;
 
+        private float horizontal;
         private bool isJumping = false;
         private bool alive = true;
+
         private Vector3 originalScale;
         private int direction = 1;
-        private float horizontal;
 
+
+        // ============================================================
+        //                          START
+        // ============================================================
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -30,10 +38,18 @@ namespace ClearSky
 
             originalScale = transform.localScale;
 
-            // Khóa xoay để không bị đổ nghiêng
+            // Không cho xoay
             rb.freezeRotation = true;
+
+            // Tắt hitbox lúc đầu
+            if (hitbox != null)
+                hitbox.SetActive(false);
         }
 
+
+        // ============================================================
+        //                          UPDATE
+        // ============================================================
         void Update()
         {
             Restart();
@@ -48,23 +64,23 @@ namespace ClearSky
             UpdateAnimations();
         }
 
+
         // ============================================================
-        //                      GROUND CHECK
+        //                       UPDATE ANIMATIONS
         // ============================================================
         void UpdateAnimations()
         {
-            // Kiểm tra chạm đất bằng OverlapCircle
+            // Kiểm tra mặt đất
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
-
-            // isJump = true nếu KHÔNG chạm đất
             anim.SetBool("isJump", !isGrounded);
 
-            // isRun = true khi đang chạy trên mặt đất
+            // Run animation
             anim.SetBool("isRun", isGrounded && Mathf.Abs(horizontal) > 0.1f);
         }
 
+
         // ============================================================
-        //                           RUN
+        //                            RUN
         // ============================================================
         void Run()
         {
@@ -93,6 +109,7 @@ namespace ClearSky
             );
         }
 
+
         // ============================================================
         //                           JUMP
         // ============================================================
@@ -105,25 +122,40 @@ namespace ClearSky
 
             if (!isJumping) return;
 
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
 
             isJumping = false;
         }
 
+
         // ============================================================
-        //                           ATTACK
+        //                 ATTACK (CLICK CHUỘT TRÁI)
         // ============================================================
         void Attack()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetMouseButtonDown(0)) // Mouse Left Click
             {
                 anim.SetTrigger("attack");
             }
         }
 
+        // ===== Animation Events =====
+        public void EnableHitbox()
+        {
+            if (hitbox != null)
+                hitbox.SetActive(true);
+        }
+
+        public void DisableHitbox()
+        {
+            if (hitbox != null)
+                hitbox.SetActive(false);
+        }
+
+
         // ============================================================
-        //                           HURT
+        //                            HURT
         // ============================================================
         void Hurt()
         {
@@ -136,8 +168,9 @@ namespace ClearSky
             }
         }
 
+
         // ============================================================
-        //                            DIE
+        //                             DIE
         // ============================================================
         void Die()
         {
@@ -149,8 +182,9 @@ namespace ClearSky
             }
         }
 
+
         // ============================================================
-        //                          RESTART
+        //                           RESTART
         // ============================================================
         void Restart()
         {
@@ -161,14 +195,15 @@ namespace ClearSky
             }
         }
 
+
         // ============================================================
-        //                     DEBUG DRAW (GROUND CHECK)
+        //                DEBUG (GROUND CHECK VISUAL)
         // ============================================================
         private void OnDrawGizmosSelected()
         {
             if (groundCheck != null)
             {
-                Gizmos.color = Color.red;
+                Gizmos.color = Color.yellow;
                 Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
             }
         }
