@@ -3,43 +3,72 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 8f;
-    public float jumpForce = 16f;
+    public float moveSpeed = 5f;
+    public float runSpeed = 7f;
+    private float currentSpeed;
 
-    [Header("Ground Check")]
+    [Header("Jump")]
+    public float jumpForce = 12f;
     public Transform groundCheck;
-    public float checkRadius = 0.2f;
+    public float groundRadius = 0.2f;
     public LayerMask groundLayer;
+    private bool isGrounded;
 
     private Rigidbody2D rb;
-    private bool isGrounded;
-    private float moveInput;
+    private Animator anim;
+    private SpriteRenderer sr;
 
-    void Start()
+    private float horizontal;
+
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    private void Update()
     {
-        // Nhận input ngang (A/D hoặc ←/→)
-        moveInput = Input.GetAxisRaw("Horizontal");
-        if (moveInput > 0) transform.localScale = new Vector3(1, 1, 1);
-        else if (moveInput < 0) transform.localScale = new Vector3(-1, 1, 1);
+        horizontal = Input.GetAxisRaw("Horizontal");
 
-        // Kiểm tra có đang đứng trên ground không
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        // Check ground
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
 
-        // Nhảy
+        // Run or walk
+        currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : moveSpeed;
+
+        // Jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
+
+        // Attack
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            anim.SetTrigger("Attack");
+        }
+
+        // Flip sprite
+        if (horizontal > 0) sr.flipX = false;
+        if (horizontal < 0) sr.flipX = true;
+
+        // Animator
+        anim.SetFloat("Speed", Mathf.Abs(horizontal));
+        anim.SetBool("IsGrounded", isGrounded);
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        // Di chuyển ngang
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(horizontal * currentSpeed, rb.linearVelocity.y);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+        }
     }
 }

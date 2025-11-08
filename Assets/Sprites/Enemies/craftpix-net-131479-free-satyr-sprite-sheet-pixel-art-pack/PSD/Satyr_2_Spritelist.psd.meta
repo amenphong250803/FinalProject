@@ -1,0 +1,1517 @@
+fileFormatVersion: 2
+guid: 3d73b777c2838464c92085f11b4604ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3642121333327164759
+    second: Satyr_2_Spritelist_0
+  - first:
+      213: 1286585444421947904
+    second: Satyr_2_Spritelist_1
+  - first:
+      213: -1469929769410395958
+    second: Satyr_2_Spritelist_2
+  - first:
+      213: 692632886856814760
+    second: Satyr_2_Spritelist_3
+  - first:
+      213: -3606741571249680218
+    second: Satyr_2_Spritelist_4
+  - first:
+      213: 5936889340517531665
+    second: Satyr_2_Spritelist_5
+  - first:
+      213: 2111445952146985047
+    second: Satyr_2_Spritelist_6
+  - first:
+      213: 817004906793661405
+    second: Satyr_2_Spritelist_7
+  - first:
+      213: -5128387818639007762
+    second: Satyr_2_Spritelist_8
+  - first:
+      213: -8204294849829984426
+    second: Satyr_2_Spritelist_9
+  - first:
+      213: 4241587429392942745
+    second: Satyr_2_Spritelist_10
+  - first:
+      213: 7014294081614069647
+    second: Satyr_2_Spritelist_11
+  - first:
+      213: 3361637573168504229
+    second: Satyr_2_Spritelist_12
+  - first:
+      213: -1843298801998679689
+    second: Satyr_2_Spritelist_13
+  - first:
+      213: 8418828368821731416
+    second: Satyr_2_Spritelist_14
+  - first:
+      213: 9088420149016046057
+    second: Satyr_2_Spritelist_15
+  - first:
+      213: 2179556649409161263
+    second: Satyr_2_Spritelist_16
+  - first:
+      213: 3275638575507790989
+    second: Satyr_2_Spritelist_17
+  - first:
+      213: -6297708115172818594
+    second: Satyr_2_Spritelist_18
+  - first:
+      213: 3855973997151307783
+    second: Satyr_2_Spritelist_19
+  - first:
+      213: 1900591239942532863
+    second: Satyr_2_Spritelist_20
+  - first:
+      213: 6791636837231705931
+    second: Satyr_2_Spritelist_21
+  - first:
+      213: -501764973414408422
+    second: Satyr_2_Spritelist_22
+  - first:
+      213: -3135248044605591543
+    second: Satyr_2_Spritelist_23
+  - first:
+      213: -4134079140964404123
+    second: Satyr_2_Spritelist_24
+  - first:
+      213: -5789985001948492096
+    second: Satyr_2_Spritelist_25
+  - first:
+      213: 2774078550294525856
+    second: Satyr_2_Spritelist_26
+  - first:
+      213: 8190303134888522716
+    second: Satyr_2_Spritelist_27
+  - first:
+      213: -8315191159096443413
+    second: Satyr_2_Spritelist_28
+  - first:
+      213: 1392023059778339331
+    second: Satyr_2_Spritelist_29
+  - first:
+      213: -1445795929668138918
+    second: Satyr_2_Spritelist_30
+  - first:
+      213: 9103369291516943048
+    second: Satyr_2_Spritelist_31
+  - first:
+      213: -3848158212762315895
+    second: Satyr_2_Spritelist_32
+  - first:
+      213: -7888960141562283444
+    second: Satyr_2_Spritelist_33
+  - first:
+      213: -6373613745307582635
+    second: Satyr_2_Spritelist_34
+  - first:
+      213: -5027736983221135781
+    second: Satyr_2_Spritelist_35
+  - first:
+      213: 3096431924494811246
+    second: Satyr_2_Spritelist_36
+  - first:
+      213: 3039649849623509623
+    second: Satyr_2_Spritelist_37
+  - first:
+      213: 6413977075083077525
+    second: Satyr_2_Spritelist_38
+  - first:
+      213: -2543055722564540745
+    second: Satyr_2_Spritelist_39
+  - first:
+      213: 766534848773385870
+    second: Satyr_2_Spritelist_40
+  - first:
+      213: -4555529040473938067
+    second: Satyr_2_Spritelist_41
+  - first:
+      213: 4741900179411301717
+    second: Satyr_2_Spritelist_42
+  - first:
+      213: 845903519781679129
+    second: Satyr_2_Spritelist_43
+  - first:
+      213: -8990082514701920344
+    second: Satyr_2_Spritelist_44
+  - first:
+      213: 1355340725394420895
+    second: Satyr_2_Spritelist_45
+  - first:
+      213: 3206325099030695423
+    second: Satyr_2_Spritelist_46
+  - first:
+      213: 8444924540926566573
+    second: Satyr_2_Spritelist_47
+  - first:
+      213: -6959464881014138356
+    second: Satyr_2_Spritelist_48
+  - first:
+      213: -8321499875473262351
+    second: Satyr_2_Spritelist_49
+  - first:
+      213: 1620563771544294543
+    second: Satyr_2_Spritelist_50
+  - first:
+      213: -1837524718270801563
+    second: Satyr_2_Spritelist_51
+  - first:
+      213: 3378801647762845891
+    second: Satyr_2_Spritelist_52
+  - first:
+      213: 8087359061099357987
+    second: Satyr_2_Spritelist_53
+  - first:
+      213: 5526676924005079992
+    second: Satyr_2_Spritelist_54
+  - first:
+      213: -2525565218044211899
+    second: Satyr_2_Spritelist_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 639
+        width: 50
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75576dd4e0a6b8230800000000000000
+      internalID: 3642121333327164759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 639
+        width: 50
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00255f325aedad110800000000000000
+      internalID: 1286585444421947904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_2
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 639
+        width: 50
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac08589a9a2c99be0800000000000000
+      internalID: -1469929769410395958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 639
+        width: 50
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a09adcd0f9bc9900800000000000000
+      internalID: 692632886856814760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_4
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 639
+        width: 50
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0570976a742fdc0800000000000000
+      internalID: -3606741571249680218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_5
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 639
+        width: 50
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110c9547661146250800000000000000
+      internalID: 5936889340517531665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_6
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 639
+        width: 50
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750582418ec5d4d10800000000000000
+      internalID: 2111445952146985047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_7
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 511
+        width: 78
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3ff2152a5965b00800000000000000
+      internalID: 817004906793661405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 511
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eefd497437e44d8b0800000000000000
+      internalID: -5128387818639007762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_9
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 511
+        width: 65
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65721536d4d742e80800000000000000
+      internalID: -8204294849829984426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_10
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 511
+        width: 63
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9968abc4b452dda30800000000000000
+      internalID: 4241587429392942745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_11
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 513
+        width: 56
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f3bbccd47c75160800000000000000
+      internalID: 7014294081614069647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_12
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 518
+        width: 57
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad9054ef8fe6ae20800000000000000
+      internalID: 3361637573168504229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_13
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 512
+        width: 75
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77137fb71894b66e0800000000000000
+      internalID: -1843298801998679689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_14
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 511
+        width: 44
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850c99cebcfa5d470800000000000000
+      internalID: 8418828368821731416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_15
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 511
+        width: 83
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9aa9719fd802e70800000000000000
+      internalID: 9088420149016046057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_16
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 511
+        width: 93
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28afdf89375f3e10800000000000000
+      internalID: 2179556649409161263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_17
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 513
+        width: 66
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c55b9ede7657d20800000000000000
+      internalID: 3275638575507790989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_18
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 515
+        width: 66
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51870006db0a98a0800000000000000
+      internalID: -6297708115172818594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_19
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 383
+        width: 64
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708c85babeb238530800000000000000
+      internalID: 3855973997151307783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_20
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 383
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe6ef7b9a1406a10800000000000000
+      internalID: 1900591239942532863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_21
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 449
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f37a648bdb04e50800000000000000
+      internalID: 6791636837231705931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_22
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 383
+        width: 67
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f96e64a6f5909f0800000000000000
+      internalID: -501764973414408422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_23
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 383
+        width: 69
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900bb82c38c5d74d0800000000000000
+      internalID: -3135248044605591543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_24
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 383
+        width: 75
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564f671bcecc0a6c0800000000000000
+      internalID: -4134079140964404123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_25
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 383
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce45004157d5afa0800000000000000
+      internalID: -5789985001948492096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_26
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 444
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7f5596eb18f7620800000000000000
+      internalID: 2774078550294525856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_27
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 383
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd37ccd9e4dc9a170800000000000000
+      internalID: 8190303134888522716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_28
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 449
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed769252b18a9c80800000000000000
+      internalID: -8315191159096443413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_29
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 383
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3028d3df895715310800000000000000
+      internalID: 1392023059778339331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_30
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 449
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58cc6a13408febe0800000000000000
+      internalID: -1445795929668138918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_31
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 255
+        width: 50
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca1110932aa55e70800000000000000
+      internalID: 9103369291516943048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_32
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 290
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983dcc07e78989ac0800000000000000
+      internalID: -3848158212762315895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_33
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 255
+        width: 63
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4af6fa7c88c48290800000000000000
+      internalID: -7888960141562283444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_34
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 255
+        width: 67
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ff46741106c87a0800000000000000
+      internalID: -6373613745307582635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_35
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 255
+        width: 71
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5692031ad3e93ab0800000000000000
+      internalID: -5027736983221135781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_36
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 127
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6041b20e6cb8fa20800000000000000
+      internalID: 3096431924494811246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_37
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 127
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77af068fe610f2a20800000000000000
+      internalID: 3039649849623509623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_38
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 127
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59763d5ca26030950800000000000000
+      internalID: 6413977075083077525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_39
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 127
+        width: 90
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b624844b4045bcd0800000000000000
+      internalID: -2543055722564540745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_40
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 56
+        width: 23
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e6819326743aa00800000000000000
+      internalID: 766534848773385870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_41
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 55
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d672392597287c0c0800000000000000
+      internalID: -4555529040473938067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_42
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 48
+        width: 51
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555fb2ae61d9ec140800000000000000
+      internalID: 4741900179411301717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_43
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 46
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910f6daf4c04dbb00800000000000000
+      internalID: 845903519781679129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_44
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 40
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7ddb9959fcc3380800000000000000
+      internalID: -8990082514701920344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_45
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 55
+        width: 44
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9431c675332fc210800000000000000
+      internalID: 1355340725394420895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_46
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 57
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdc42290b72f7c20800000000000000
+      internalID: 3206325099030695423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_47
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 56
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da028e87026623570800000000000000
+      internalID: 8444924540926566573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_48
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 69
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a985440930b6f90800000000000000
+      internalID: -6959464881014138356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_49
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 80
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f875f3d3f7148c80800000000000000
+      internalID: -8321499875473262351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_50
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 57
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84d3c20a266d7610800000000000000
+      internalID: 1620563771544294543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_51
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 59
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569187d110dcf76e0800000000000000
+      internalID: -1837524718270801563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_52
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 38
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0b86d623ae3ee20800000000000000
+      internalID: 3378801647762845891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_53
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 37
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3272dd7a7321c3070800000000000000
+      internalID: 8087359061099357987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_54
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 32
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbdbab7163b2bc40800000000000000
+      internalID: 5526676924005079992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Satyr_2_Spritelist_55
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 27
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d8461b0d363fcd0800000000000000
+      internalID: -2525565218044211899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
