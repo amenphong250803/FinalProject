@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class PlayerHitbox : MonoBehaviour
 {
-    public int damage = 20;  
+    public int damage = 50;
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy"))
         {
-            EnemyHealth hp = col.GetComponent<EnemyHealth>();
-            if (hp != null)
+            EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
+            if (enemy != null)
             {
-                hp.TakeDamage(damage);
+                enemy.TakeDamage(damage);
             }
         }
     }
