@@ -2,87 +2,77 @@
 
 public class EnemyPatrol : MonoBehaviour
 {
+    [Header("Patrol Points")]
     public Transform leftPoint;
     public Transform rightPoint;
-    public float speed = 2f;
 
-    public float chaseRange = 4f;      // phạm vi phát hiện player
-    private Transform player;
+    [Header("Movement")]
+    public float speed = 1f;
 
     private Rigidbody2D rb;
+    private Animator anim;
+    private Vector3 baseScale;
+
     private bool movingRight = true;
-    private Vector3 originalScale;
+    private bool canMove = true;         // NGĂN di chuyển khi chết
 
-    private EnemyHealth hp;
-
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.freezeRotation = true;
-
-        hp = GetComponent<EnemyHealth>();
-
-        leftPoint.parent = null;
-        rightPoint.parent = null;
-
-        originalScale = transform.localScale;
-
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        anim = GetComponent<Animator>();
+        baseScale = transform.localScale; // scale gốc
     }
 
-    void Update()
+    private void Update()
     {
-        if (hp.currentHP <= 0)
-        {
-            rb.linearVelocity = Vector2.zero;
-            return;
-        }
-
-        float distance = Vector2.Distance(transform.position, player.position);
-
-        if (distance <= chaseRange)
-            ChasePlayer();
-        else
-            Patrol();
+        if (!canMove) return;
+        PatrolMovement();
     }
 
-    void Patrol()
+    private void PatrolMovement()
     {
+        if (anim != null)
+            anim.SetBool("walk", true); // phải tồn tại trong Animator
+
+        float leftX = Mathf.Min(leftPoint.position.x, rightPoint.position.x);
+        float rightX = Mathf.Max(leftPoint.position.x, rightPoint.position.x);
+
+        // ➤ DI CHUYỂN SANG PHẢI
         if (movingRight)
         {
-            rb.linearVelocity = new Vector2(speed, 0);
+            rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
 
-            transform.localScale = new Vector3(
-                Mathf.Abs(originalScale.x), originalScale.y, originalScale.z
-            );
-
-            if (transform.position.x >= rightPoint.position.x)
+            if (transform.position.x >= rightX)
+            {
                 movingRight = false;
+                Flip(-1);
+            }
         }
+        // ➤ DI CHUYỂN SANG TRÁI
         else
         {
-            rb.linearVelocity = new Vector2(-speed, 0);
+            rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
 
-            transform.localScale = new Vector3(
-                -Mathf.Abs(originalScale.x), originalScale.y, originalScale.z
-            );
-
-            if (transform.position.x <= leftPoint.position.x)
+            if (transform.position.x <= leftX)
+            {
                 movingRight = true;
+                Flip(1);
+            }
         }
     }
 
-    void ChasePlayer()
+    private void Flip(int dir)
     {
-        if (player.position.x > transform.position.x)
-        {
-            rb.linearVelocity = new Vector2(speed * 1.2f, 0);
-            transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
-        }
-        else
-        {
-            rb.linearVelocity = new Vector2(-speed * 1.2f, 0);
-            transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
-        }
+        transform.localScale = new Vector3(Mathf.Abs(baseScale.x) * dir, baseScale.y, baseScale.z);
+    }
+
+    // ➤ HÀM NÀY 100% NGĂN enemy DI CHUYỂN
+    public void StopMoving()
+    {
+        canMove = false;
+        rb.linearVelocity = Vector2.zero;
+
+        if (anim != null)
+            anim.SetBool("walk", false);
     }
 }

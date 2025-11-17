@@ -15,7 +15,7 @@ namespace ClearSky
         private bool isGrounded;
 
         [Header("Attack")]
-        public GameObject hitbox;     // <-- QUAN TRỌNG: phải gán object này trong Inspector
+        public GameObject hitbox;    
 
         private Rigidbody2D rb;
         private Animator anim;
