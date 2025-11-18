@@ -7,72 +7,86 @@ public class EnemyPatrol : MonoBehaviour
     public Transform rightPoint;
 
     [Header("Movement")]
-    public float speed = 1f;
+    public float speed = 2f;
+    public float idleTime = 2f;   // đứng im tại point
 
     private Rigidbody2D rb;
     private Animator anim;
     private Vector3 baseScale;
 
     private bool movingRight = true;
-    private bool canMove = true;         // NGĂN di chuyển khi chết
+    private bool isIdle = false;
+    private bool canMove = true;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        baseScale = transform.localScale; // scale gốc
+
+        // scale chuẩn (không bao giờ thay đổi trừ flip)
+        baseScale = new Vector3(0.8f, 0.8f, 1f);
+        transform.localScale = baseScale;
     }
 
     private void Update()
     {
-        if (!canMove) return;
+        if (!canMove || isIdle) return;
         PatrolMovement();
     }
 
     private void PatrolMovement()
     {
-        if (anim != null)
-            anim.SetBool("walk", true); // phải tồn tại trong Animator
+        anim.SetBool("walk", true);
 
         float leftX = Mathf.Min(leftPoint.position.x, rightPoint.position.x);
         float rightX = Mathf.Max(leftPoint.position.x, rightPoint.position.x);
 
-        // ➤ DI CHUYỂN SANG PHẢI
         if (movingRight)
         {
             rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
 
             if (transform.position.x >= rightX)
-            {
-                movingRight = false;
-                Flip(-1);
-            }
+                StartCoroutine(IdleAtPoint(false)); // chuyển sang đi trái
         }
-        // ➤ DI CHUYỂN SANG TRÁI
         else
         {
             rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
 
             if (transform.position.x <= leftX)
-            {
-                movingRight = true;
-                Flip(1);
-            }
+                StartCoroutine(IdleAtPoint(true)); // chuyển sang đi phải
         }
+    }
+
+    private System.Collections.IEnumerator IdleAtPoint(bool nextDirectionRight)
+    {
+        isIdle = true;
+        rb.linearVelocity = Vector2.zero;
+
+        anim.SetBool("walk", false);
+        anim.Play("Minator2 idle");  // idle cho chắc chắn
+
+        yield return new WaitForSeconds(idleTime);
+
+        movingRight = nextDirectionRight;
+        Flip(movingRight ? 1 : -1);
+
+        isIdle = false;
     }
 
     private void Flip(int dir)
     {
-        transform.localScale = new Vector3(Mathf.Abs(baseScale.x) * dir, baseScale.y, baseScale.z);
+        // dir = 1 phải, -1 trái — KHÔNG bao giờ thay baseScale
+        transform.localScale = new Vector3(
+            baseScale.x * dir,
+            baseScale.y,
+            baseScale.z
+        );
     }
 
-    // ➤ HÀM NÀY 100% NGĂN enemy DI CHUYỂN
     public void StopMoving()
     {
         canMove = false;
         rb.linearVelocity = Vector2.zero;
-
-        if (anim != null)
-            anim.SetBool("walk", false);
+        anim.SetBool("walk", false);
     }
 }

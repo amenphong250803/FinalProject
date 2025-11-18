@@ -2,45 +2,39 @@
 
 public class EnemyAttack : MonoBehaviour
 {
-    public Transform attackPoint;
-    public float attackRange = 1f;
+    public float attackCooldown = 1f;
     public int damage = 10;
-    public float cooldown = 1f;
-    public LayerMask playerLayer;
 
-    private float lastAttackTime;
-    private EnemyHealth health;
+    [HideInInspector] public bool canAttack = false;
+    [HideInInspector] public Transform target;
+
+    private float lastAttack;
     private Animator anim;
+    private EnemyHealth hp;
 
     private void Awake()
     {
-        health = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>();
+        hp = GetComponent<EnemyHealth>();
     }
 
     private void Update()
     {
-        if (health.isDead) return;           // CHẶN ATTACK KHI CHẾT
+        if (hp.IsDead) return;
+        if (!canAttack) return;
 
-        Collider2D player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
-
-        if (player != null && Time.time >= lastAttackTime + cooldown)
+        // đánh nếu đến cooldown
+        if (Time.time >= lastAttack + attackCooldown)
         {
             anim.SetTrigger("attack");
 
-            PlayerHealth p = player.GetComponent<PlayerHealth>();
+            PlayerHealth p = target.GetComponent<PlayerHealth>();
             if (p != null)
+            {
                 p.TakeDamage(damage);
+            }
 
-            lastAttackTime = Time.time;
+            lastAttack = Time.time;
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null) return;
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

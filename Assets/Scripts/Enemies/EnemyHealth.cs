@@ -4,30 +4,29 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHP = 100;
     public int currentHP;
+    public bool IsDead { get; private set; }
 
-    private Animator anim;
-    private EnemyPatrol patrol;
-    private Rigidbody2D rb;
-    public bool isDead = false;
+    Animator anim;
+    EnemyPatrol patrol;
+    Rigidbody2D rb;
 
-    private void Awake()
+    void Awake()
     {
         anim = GetComponent<Animator>();
         patrol = GetComponent<EnemyPatrol>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
+    void Start()
     {
         currentHP = maxHP;
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int dmg)
     {
-        if (isDead) return;
+        if (IsDead) return;
 
-        currentHP -= amount;
-
+        currentHP -= dmg;
         if (currentHP <= 0)
         {
             currentHP = 0;
@@ -39,20 +38,27 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    private void Die()
+    void Die()
     {
-        if (isDead) return;
-        isDead = true;
+        if (IsDead) return;
+        IsDead = true;
 
+        // Stop patrol
         if (patrol != null)
         {
             patrol.StopMoving();
             patrol.enabled = false;
         }
 
+        // Stop physics
         rb.linearVelocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.bodyType = RigidbodyType2D.Static;
 
+        // Play animation once
+        anim.ResetTrigger("attack");
+        anim.ResetTrigger("hurt");
         anim.SetTrigger("dead");
+
+        Debug.Log("Enemy Died!");
     }
 }
