@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         // Di chuyển
         float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
+        HandleMovement(moveInput);
 
         // Flip sprite
         if (moveInput > 0)
@@ -47,6 +47,11 @@ public class PlayerController : MonoBehaviour
 
         // Debug trạng thái
         Debug.Log("isGrounded: " + isGrounded + ", Velocity Y: " + rb.linearVelocity.y);
+    }
+
+    private void HandleMovement(float moveInput)
+    {
+        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
