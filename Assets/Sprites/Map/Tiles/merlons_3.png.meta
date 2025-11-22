@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      merlons_3_0: 3276800802501418525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
