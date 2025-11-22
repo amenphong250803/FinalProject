@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      floor_tile_carpet_corner_left_0: -956806399212821216
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ceiling_transparent_1_0: 3860251813760658897
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      floor_wood_carpet_transition_1_0: -7478862436438917685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
