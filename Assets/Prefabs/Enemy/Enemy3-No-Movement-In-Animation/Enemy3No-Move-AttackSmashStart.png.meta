@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy3No-Move-AttackSmashStart_0: 8800674282940891994
+      Enemy3No-Move-AttackSmashStart_1: 7059174939733703851
+      Enemy3No-Move-AttackSmashStart_10: -249057006195236874
+      Enemy3No-Move-AttackSmashStart_11: -7754473731503768982
+      Enemy3No-Move-AttackSmashStart_2: 8808176892804712893
+      Enemy3No-Move-AttackSmashStart_3: 7532257173051118999
+      Enemy3No-Move-AttackSmashStart_4: 1356726567464808967
+      Enemy3No-Move-AttackSmashStart_5: 5600212147655430360
+      Enemy3No-Move-AttackSmashStart_6: 8837354227439260892
+      Enemy3No-Move-AttackSmashStart_7: -7328728441424297576
+      Enemy3No-Move-AttackSmashStart_8: 5170524242060383293
+      Enemy3No-Move-AttackSmashStart_9: 7647064870438675075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

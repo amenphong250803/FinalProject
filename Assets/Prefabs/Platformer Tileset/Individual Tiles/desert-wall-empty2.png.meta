@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      desert-wall-empty2_0: -2420962669731494931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

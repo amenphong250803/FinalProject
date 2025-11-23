@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grass-platform-corner_0: 6860448591371430980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

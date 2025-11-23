@@ -759,7 +759,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DungeonMaster_Death_09_0: 6754733098480910691
+      DungeonMaster_Death_09_1: 1536113582815807256
+      DungeonMaster_Death_09_10: -6724941603272657495
+      DungeonMaster_Death_09_11: 718052192754370817
+      DungeonMaster_Death_09_12: -2398464463526302736
+      DungeonMaster_Death_09_13: 8605360744003292466
+      DungeonMaster_Death_09_14: 1290780030178503392
+      DungeonMaster_Death_09_15: 5071988972709273605
+      DungeonMaster_Death_09_16: -5179670388372395840
+      DungeonMaster_Death_09_17: -6888378012568035867
+      DungeonMaster_Death_09_18: 3163306824152837448
+      DungeonMaster_Death_09_19: 7293187960640978411
+      DungeonMaster_Death_09_2: -7743778926964913970
+      DungeonMaster_Death_09_20: 8587397003382930354
+      DungeonMaster_Death_09_21: 2552391109140336359
+      DungeonMaster_Death_09_22: -1007496086991772470
+      DungeonMaster_Death_09_23: 2519175737684136349
+      DungeonMaster_Death_09_24: -6992558988779006197
+      DungeonMaster_Death_09_25: 3991554704303804231
+      DungeonMaster_Death_09_3: 5940202412330919883
+      DungeonMaster_Death_09_4: 5853094839526981193
+      DungeonMaster_Death_09_5: -6096043144770343567
+      DungeonMaster_Death_09_6: -7292240839487521882
+      DungeonMaster_Death_09_7: 9216740291104986025
+      DungeonMaster_Death_09_8: -8555184632693024884
+      DungeonMaster_Death_09_9: -2254529612699131402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

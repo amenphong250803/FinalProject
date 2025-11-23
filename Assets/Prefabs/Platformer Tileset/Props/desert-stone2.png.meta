@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      desert-stone2_0: -4412100882357854681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

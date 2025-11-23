@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GoblinKing_Death_2_0: -1072962576353855410
+      GoblinKing_Death_2_1: 443520825963117188
+      GoblinKing_Death_2_2: 8791488682463037510
+      GoblinKing_Death_2_3: -6442930341928182421
+      GoblinKing_Death_2_4: -3633132557084651327
+      GoblinKing_Death_2_5: 2581875004098913612
+      GoblinKing_Death_2_6: -3999269612092678888
+      GoblinKing_Death_2_7: -2596323254769822175
+      GoblinKing_Death_2_8: 4427610325151620828
+      GoblinKing_Death_2_9: 8879025313507996591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GoblinKing_Death_3_0: 7582246161533300572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

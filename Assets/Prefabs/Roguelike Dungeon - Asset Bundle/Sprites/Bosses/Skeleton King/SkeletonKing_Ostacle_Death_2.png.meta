@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SkeletonKing_Ostacle_Death_2_0: 1240234182109411944
+      SkeletonKing_Ostacle_Death_2_1: 5374754993307980070
+      SkeletonKing_Ostacle_Death_2_10: -1439345452456383525
+      SkeletonKing_Ostacle_Death_2_11: 6506540659776211971
+      SkeletonKing_Ostacle_Death_2_2: -5256816150248750429
+      SkeletonKing_Ostacle_Death_2_3: 7122832299263714710
+      SkeletonKing_Ostacle_Death_2_4: -8405042950152445
+      SkeletonKing_Ostacle_Death_2_5: -6885358840448732479
+      SkeletonKing_Ostacle_Death_2_6: 8185181215416537279
+      SkeletonKing_Ostacle_Death_2_7: 5436020343288924917
+      SkeletonKing_Ostacle_Death_2_8: -3104177169038965895
+      SkeletonKing_Ostacle_Death_2_9: -1707581851532386751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

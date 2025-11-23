@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SlimeDoor_Close_0_0: -7812477019615279369
+      SlimeDoor_Close_0_1: -3155205773007645133
+      SlimeDoor_Close_0_2: 4866292164265313996
+      SlimeDoor_Close_0_3: -504815907733452233
+      SlimeDoor_Close_0_4: 5531604289083120460
+      SlimeDoor_Close_0_5: 6135807896875406689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

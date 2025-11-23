@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player_Walk_Sword_Defence4_0_0: -4846315255824848974
+      Player_Walk_Sword_Defence4_0_1: -2247481524196423719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
