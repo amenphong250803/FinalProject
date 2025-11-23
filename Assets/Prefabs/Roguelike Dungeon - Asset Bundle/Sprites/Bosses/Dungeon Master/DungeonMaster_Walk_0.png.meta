@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DungeonMaster_Walk_0_0: -4477093610259845307
+      DungeonMaster_Walk_0_1: -9074820961404152845
+      DungeonMaster_Walk_0_2: -8643945526417595932
+      DungeonMaster_Walk_0_3: -2929363001712565256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

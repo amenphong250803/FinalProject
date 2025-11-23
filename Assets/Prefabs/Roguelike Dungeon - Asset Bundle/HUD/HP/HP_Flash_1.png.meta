@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HP_Flash_1_0: -8391199361987940871
+      HP_Flash_1_1: -5094827122827852288
+      HP_Flash_1_2: -8034259742974399557
+      HP_Flash_1_3: 5355759171050875551
+      HP_Flash_1_4: -6345623522431845762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

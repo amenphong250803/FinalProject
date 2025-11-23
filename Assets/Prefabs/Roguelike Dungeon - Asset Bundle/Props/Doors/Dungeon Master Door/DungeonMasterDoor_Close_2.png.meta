@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DungeonMasterDoor_Close_2_0: 6428357545204894791
+      DungeonMasterDoor_Close_2_1: -4218004646286837500
+      DungeonMasterDoor_Close_2_2: 390293403493757184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

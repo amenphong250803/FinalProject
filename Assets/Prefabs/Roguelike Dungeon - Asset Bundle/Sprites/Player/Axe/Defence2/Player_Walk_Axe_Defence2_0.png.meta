@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player_Walk_Axe_Defence2_0_0: 5309209997302678476
+      Player_Walk_Axe_Defence2_0_1: 603426352046016613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

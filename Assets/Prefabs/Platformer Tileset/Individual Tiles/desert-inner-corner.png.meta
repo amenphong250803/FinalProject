@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      desert-inner-corner_0: -8923587759407274054
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

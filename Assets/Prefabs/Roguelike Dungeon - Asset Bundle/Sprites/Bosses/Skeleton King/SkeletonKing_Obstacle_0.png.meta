@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SkeletonKing_Obstacle_0_0: 8374797196280511570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

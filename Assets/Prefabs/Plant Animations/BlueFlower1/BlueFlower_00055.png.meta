@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BlueFlower_00055_0: 9060506876557015841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Defence_Flash_2_0: 9055039065292081884
+      Defence_Flash_2_1: 2413833947183192877
+      Defence_Flash_2_2: 6153230952565886357
+      Defence_Flash_2_3: 4881222078556827162
+      Defence_Flash_2_4: -6549941236191285138
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

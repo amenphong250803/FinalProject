@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Plant Wind 1_00017_0: 4990604282004877411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

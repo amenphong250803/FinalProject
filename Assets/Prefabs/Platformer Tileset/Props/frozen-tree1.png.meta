@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      frozen-tree1_0: -1522204512659768579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Skeleton_Death_3_0: -7085469764866538617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

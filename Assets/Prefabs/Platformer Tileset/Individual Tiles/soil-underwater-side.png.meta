@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      soil-underwater-side_0: 5496513484943598409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

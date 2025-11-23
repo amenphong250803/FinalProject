@@ -634,7 +634,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SlimeKing_Obstacle_Death_2_0: -7551005650760819385
+      SlimeKing_Obstacle_Death_2_1: -1524347891840617650
+      SlimeKing_Obstacle_Death_2_10: -7243899368352683925
+      SlimeKing_Obstacle_Death_2_11: -7359494296604343778
+      SlimeKing_Obstacle_Death_2_12: 4902635259273670017
+      SlimeKing_Obstacle_Death_2_13: -3663392952723836634
+      SlimeKing_Obstacle_Death_2_14: -7211141070913605968
+      SlimeKing_Obstacle_Death_2_15: 5579889440015169057
+      SlimeKing_Obstacle_Death_2_16: 8395566509420219051
+      SlimeKing_Obstacle_Death_2_17: -6862006781508237473
+      SlimeKing_Obstacle_Death_2_18: 8054067016497938596
+      SlimeKing_Obstacle_Death_2_19: 5752524686833217643
+      SlimeKing_Obstacle_Death_2_2: -3880680852249705312
+      SlimeKing_Obstacle_Death_2_20: -2024604027412140314
+      SlimeKing_Obstacle_Death_2_3: -6140553141971731191
+      SlimeKing_Obstacle_Death_2_4: -567551947105594377
+      SlimeKing_Obstacle_Death_2_5: -738320693462673920
+      SlimeKing_Obstacle_Death_2_6: -6083698210354679217
+      SlimeKing_Obstacle_Death_2_7: -3227476716852948226
+      SlimeKing_Obstacle_Death_2_8: -8272563599806420638
+      SlimeKing_Obstacle_Death_2_9: -1431349241823284661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

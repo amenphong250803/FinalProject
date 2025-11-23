@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy3No-Move-Fly_0: -2765775529765184849
+      Enemy3No-Move-Fly_1: -4980911282358748290
+      Enemy3No-Move-Fly_2: 8682084144246120881
+      Enemy3No-Move-Fly_3: 7211696952862935837
+      Enemy3No-Move-Fly_4: -6755229736780472082
+      Enemy3No-Move-Fly_5: -4184318113890634138
+      Enemy3No-Move-Fly_6: 7438779034631352302
+      Enemy3No-Move-Fly_7: 2620111186157641508
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
