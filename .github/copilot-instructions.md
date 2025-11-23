@@ -4,5 +4,7 @@
 - Active game object:
   - Name: Terrain_and_Props_3 (1)
   - Tag: Untagged
+  - Name: Spawn Point (1)
+  - Tag: SpawnPoint
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
