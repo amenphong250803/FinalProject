@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GoblinKing_Blast_2_0: -991965972956473567
+      GoblinKing_Blast_2_1: -1055554893394738498
+      GoblinKing_Blast_2_2: -8155958025422700155
+      GoblinKing_Blast_2_3: -5541734801365226650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

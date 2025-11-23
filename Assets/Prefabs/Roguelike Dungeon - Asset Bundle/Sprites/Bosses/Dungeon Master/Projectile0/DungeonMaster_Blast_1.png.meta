@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DungeonMaster_Blast_1_0: 4395765054298326083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

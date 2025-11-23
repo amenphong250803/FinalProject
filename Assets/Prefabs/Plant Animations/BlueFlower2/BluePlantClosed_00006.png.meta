@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BluePlantClosed_00006_0: -8577891335377697687
+      BluePlantClosed_00006_1: 643171123684004958
+      BluePlantClosed_00006_2: 326963493248239192
+      BluePlantClosed_00006_3: 6256355335283492700
+      BluePlantClosed_00006_4: 2150626657984995240
+      BluePlantClosed_00006_5: 1547029806896253174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

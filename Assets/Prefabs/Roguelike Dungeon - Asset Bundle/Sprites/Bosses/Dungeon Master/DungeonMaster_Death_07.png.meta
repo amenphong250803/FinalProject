@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DungeonMaster_Death_07_0: 7346585969220080206
+      DungeonMaster_Death_07_1: 7104370240886863020
+      DungeonMaster_Death_07_2: -8864772755611969066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

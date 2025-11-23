@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SlimeKing_Obstacle_Death_3_0: -4049485812240746279
+      SlimeKing_Obstacle_Death_3_1: 3909300279486804881
+      SlimeKing_Obstacle_Death_3_10: -5206305244166019811
+      SlimeKing_Obstacle_Death_3_11: -3200179221512679876
+      SlimeKing_Obstacle_Death_3_2: 4218475406792442045
+      SlimeKing_Obstacle_Death_3_3: -1367064501200045005
+      SlimeKing_Obstacle_Death_3_4: -4050056871201180819
+      SlimeKing_Obstacle_Death_3_5: -8584224521789573976
+      SlimeKing_Obstacle_Death_3_6: -7732848223764889704
+      SlimeKing_Obstacle_Death_3_7: 5186402098889678418
+      SlimeKing_Obstacle_Death_3_8: 1024015246627915716
+      SlimeKing_Obstacle_Death_3_9: 9172143393944670834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

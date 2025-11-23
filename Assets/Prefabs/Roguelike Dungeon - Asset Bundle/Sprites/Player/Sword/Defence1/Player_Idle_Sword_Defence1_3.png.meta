@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player_Idle_Sword_Defence1_3_0: 2651538825510757679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SlimeKing_Obstacle_1_0: -8214908020223095733
+      SlimeKing_Obstacle_1_1: 5146100716686861462
+      SlimeKing_Obstacle_1_2: 48078424533775793
+      SlimeKing_Obstacle_1_3: -550588106086901914
+      SlimeKing_Obstacle_1_4: 2864679108414507679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

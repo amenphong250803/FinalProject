@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GoblinDoor_Close_1_0: 3696688243794937794
+      GoblinDoor_Close_1_1: 4324192768332832124
+      GoblinDoor_Close_1_2: -6749753529038562295
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

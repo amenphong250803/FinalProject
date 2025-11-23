@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player_Idle_Scepter_Defence3_1_0: -6704875083642710795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

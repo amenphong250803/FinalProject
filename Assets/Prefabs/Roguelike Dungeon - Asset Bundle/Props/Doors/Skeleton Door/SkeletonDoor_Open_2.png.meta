@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SkeletonDoor_Open_2_0: -8075817795856247590
+      SkeletonDoor_Open_2_1: 8833901558609548514
+      SkeletonDoor_Open_2_2: 6665289008360615484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

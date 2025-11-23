@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player_Walk_Scepter_Defence2_2_0: -1889902249368679913
+      Player_Walk_Scepter_Defence2_2_1: -2848635832603576250
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

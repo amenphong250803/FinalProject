@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      soil-cave-transition_0: -4514649084430032993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
