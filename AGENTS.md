@@ -3,6 +3,6 @@
 - Unity version: Unity 6000.0.38f1
 - Active game object:
   - Name: Model
-  - Tag: Enemy
-  - Layer: Enemy
+  - Tag: Player
+  - Layer: Player
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
