@@ -16,12 +16,20 @@ public class EnemyAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         hp = GetComponent<EnemyHealth>();
+
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            target = playerObj.transform;
+        }
     }
 
     private void Update()
     {
         if (hp.IsDead) return;
         if (!canAttack) return;
+
+        if (target == null) return;
 
         // đánh nếu đến cooldown
         if (Time.time >= lastAttack + attackCooldown)
