@@ -1,0 +1,2483 @@
+fileFormatVersion: 2
+guid: 319d5c53747205748b88317902bae297
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7253445370477397514
+    second: ButtonsPurple_0
+  - first:
+      213: -4419580762407054573
+    second: ButtonsPurple_1
+  - first:
+      213: 3527142645251848069
+    second: ButtonsPurple_2
+  - first:
+      213: 9218087840278889020
+    second: ButtonsPurple_3
+  - first:
+      213: 3985541751858229644
+    second: ButtonsPurple_4
+  - first:
+      213: -3743401088535622622
+    second: ButtonsPurple_5
+  - first:
+      213: 6275417054635221795
+    second: ButtonsPurple_6
+  - first:
+      213: -7747922298434485609
+    second: ButtonsPurple_7
+  - first:
+      213: -6681379343528501156
+    second: ButtonsPurple_8
+  - first:
+      213: -6314220787609163807
+    second: ButtonsPurple_9
+  - first:
+      213: -8367935612702544146
+    second: ButtonsPurple_10
+  - first:
+      213: -2427994644149945018
+    second: ButtonsPurple_11
+  - first:
+      213: -858103400367528426
+    second: ButtonsPurple_12
+  - first:
+      213: 2499136243937788271
+    second: ButtonsPurple_13
+  - first:
+      213: 6466484837269063394
+    second: ButtonsPurple_14
+  - first:
+      213: -416265293913531443
+    second: ButtonsPurple_15
+  - first:
+      213: -6024807281726628033
+    second: ButtonsPurple_16
+  - first:
+      213: 8284017925293457882
+    second: ButtonsPurple_17
+  - first:
+      213: 1314510181073381137
+    second: ButtonsPurple_18
+  - first:
+      213: -7072525294677814040
+    second: ButtonsPurple_19
+  - first:
+      213: 1878712083438715208
+    second: ButtonsPurple_20
+  - first:
+      213: 7533911024412240800
+    second: ButtonsPurple_21
+  - first:
+      213: -4760153185992492468
+    second: ButtonsPurple_22
+  - first:
+      213: 2235535253191565301
+    second: ButtonsPurple_23
+  - first:
+      213: -6876402425209153998
+    second: ButtonsPurple_24
+  - first:
+      213: -2361189316032382006
+    second: ButtonsPurple_25
+  - first:
+      213: 5087827512427480403
+    second: ButtonsPurple_26
+  - first:
+      213: -2056071829122044894
+    second: ButtonsPurple_27
+  - first:
+      213: 7137030430150952231
+    second: ButtonsPurple_28
+  - first:
+      213: -5110784412806060337
+    second: ButtonsPurple_29
+  - first:
+      213: 7062755904138201159
+    second: ButtonsPurple_30
+  - first:
+      213: -122319798017899349
+    second: ButtonsPurple_31
+  - first:
+      213: -3113178797600539938
+    second: ButtonsPurple_32
+  - first:
+      213: -3990150256280938175
+    second: ButtonsPurple_33
+  - first:
+      213: -2691515803430125767
+    second: ButtonsPurple_34
+  - first:
+      213: -4043520351697147477
+    second: ButtonsPurple_35
+  - first:
+      213: 401057593250255155
+    second: ButtonsPurple_36
+  - first:
+      213: -6705213574991895396
+    second: ButtonsPurple_37
+  - first:
+      213: -5620207262404529104
+    second: ButtonsPurple_38
+  - first:
+      213: -9099835004393215141
+    second: ButtonsPurple_39
+  - first:
+      213: -8243220588642975407
+    second: ButtonsPurple_40
+  - first:
+      213: 6062860245497189459
+    second: ButtonsPurple_41
+  - first:
+      213: -451446150624636679
+    second: ButtonsPurple_42
+  - first:
+      213: -8190004936566353244
+    second: ButtonsPurple_43
+  - first:
+      213: -2886422279308024598
+    second: ButtonsPurple_44
+  - first:
+      213: 1436209942000061041
+    second: ButtonsPurple_45
+  - first:
+      213: 5131561495116384025
+    second: ButtonsPurple_46
+  - first:
+      213: -3401679738480876093
+    second: ButtonsPurple_47
+  - first:
+      213: -6090531534847506699
+    second: ButtonsPurple_48
+  - first:
+      213: 6954542962252997412
+    second: ButtonsPurple_49
+  - first:
+      213: -9195066120027534257
+    second: ButtonsPurple_50
+  - first:
+      213: 5155725910165637641
+    second: ButtonsPurple_51
+  - first:
+      213: -4887602835238013875
+    second: ButtonsPurple_52
+  - first:
+      213: 6739599822913642813
+    second: ButtonsPurple_53
+  - first:
+      213: 7966646843651713333
+    second: ButtonsPurple_54
+  - first:
+      213: 1730804265874024852
+    second: ButtonsPurple_55
+  - first:
+      213: -3593531226734603506
+    second: ButtonsPurple_56
+  - first:
+      213: -3735921815692950256
+    second: ButtonsPurple_57
+  - first:
+      213: 5724822371825495059
+    second: ButtonsPurple_58
+  - first:
+      213: -140967443184970597
+    second: ButtonsPurple_59
+  - first:
+      213: -7978379464502734601
+    second: ButtonsPurple_60
+  - first:
+      213: -2656883536563717019
+    second: ButtonsPurple_61
+  - first:
+      213: 189937710931416110
+    second: ButtonsPurple_62
+  - first:
+      213: 8104056798664505329
+    second: ButtonsPurple_63
+  - first:
+      213: 8361448873275117563
+    second: ButtonsPurple_64
+  - first:
+      213: 4289663722388478590
+    second: ButtonsPurple_65
+  - first:
+      213: 829726702635421449
+    second: ButtonsPurple_66
+  - first:
+      213: 1379561556420182806
+    second: ButtonsPurple_67
+  - first:
+      213: 3729601396258754059
+    second: ButtonsPurple_68
+  - first:
+      213: -5228259916860289210
+    second: ButtonsPurple_69
+  - first:
+      213: -1767543209912216746
+    second: ButtonsPurple_70
+  - first:
+      213: -5504711787107379458
+    second: ButtonsPurple_71
+  - first:
+      213: -2771991777059946919
+    second: ButtonsPurple_72
+  - first:
+      213: 8755629666844945035
+    second: ButtonsPurple_73
+  - first:
+      213: 3097857820145575412
+    second: ButtonsPurple_74
+  - first:
+      213: 5889796869757846867
+    second: ButtonsPurple_75
+  - first:
+      213: 5539851519801821740
+    second: ButtonsPurple_76
+  - first:
+      213: 1132994887610591788
+    second: ButtonsPurple_77
+  - first:
+      213: -1446600077010127993
+    second: ButtonsPurple_78
+  - first:
+      213: -8906430555616973756
+    second: ButtonsPurple_79
+  - first:
+      213: 6201051997455026980
+    second: ButtonsPurple_80
+  - first:
+      213: 7448934474830816070
+    second: ButtonsPurple_81
+  - first:
+      213: -2829320884365586542
+    second: ButtonsPurple_82
+  - first:
+      213: -5820225675116405734
+    second: ButtonsPurple_83
+  - first:
+      213: -8403337894073416272
+    second: ButtonsPurple_84
+  - first:
+      213: 7191361770595005594
+    second: ButtonsPurple_85
+  - first:
+      213: -2560166175485170243
+    second: ButtonsPurple_86
+  - first:
+      213: -1330651528030177752
+    second: ButtonsPurple_87
+  - first:
+      213: -6487324583518641169
+    second: ButtonsPurple_88
+  - first:
+      213: -4608361154921448051
+    second: ButtonsPurple_89
+  - first:
+      213: -953222847956295036
+    second: ButtonsPurple_90
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ButtonsPurple_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 207
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f93efeadd5965b90800000000000000
+      internalID: -7253445370477397514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 207
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313d39866be7aa2c0800000000000000
+      internalID: -4419580762407054573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 207
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5873e5a5c8de2f030800000000000000
+      internalID: 3527142645251848069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 207
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32cb2c1d0a3def70800000000000000
+      internalID: 9218087840278889020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 207
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c817ff46b1d7f4730800000000000000
+      internalID: 3985541751858229644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_5
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 207
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c060a1b84cc0cc0800000000000000
+      internalID: -3743401088535622622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_6
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 207
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323e5f60092c61750800000000000000
+      internalID: 6275417054635221795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_7
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 207
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7920c7648b9d97490800000000000000
+      internalID: -7747922298434485609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_8
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 206
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c50e953f2e8f643a0800000000000000
+      internalID: -6681379343528501156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_9
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 207
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e72b29d5a16f58a0800000000000000
+      internalID: -6314220787609163807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_10
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 207
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee268d35ee1fdb80800000000000000
+      internalID: -8367935612702544146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_11
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 207
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d34e63cb70e4ed0800000000000000
+      internalID: -2427994644149945018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_12
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 207
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616e988f0876714f0800000000000000
+      internalID: -858103400367528426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_13
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 207
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6147314c27bea220800000000000000
+      internalID: 2499136243937788271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_14
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 207
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e64fd6d2b19db950800000000000000
+      internalID: 6466484837269063394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_15
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 207
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcbd5ffabe0293af0800000000000000
+      internalID: -416265293913531443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_16
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f5f74b2b5936ca0800000000000000
+      internalID: -6024807281726628033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_17
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1c516996eb6f270800000000000000
+      internalID: 8284017925293457882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_18
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117638c8b041e3210800000000000000
+      internalID: 1314510181073381137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_19
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e493c167b759dd90800000000000000
+      internalID: -7072525294677814040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_20
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 174
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8414990afa6821a10800000000000000
+      internalID: 1878712083438715208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_21
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abad7b0924dd8860800000000000000
+      internalID: 7533911024412240800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_22
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a3970d5e980fdb0800000000000000
+      internalID: -4760153185992492468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_23
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff9859e777360f10800000000000000
+      internalID: 2235535253191565301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_24
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23616c05d6c1290a0800000000000000
+      internalID: -6876402425209153998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_25
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 174
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb3172c3de5b3fd0800000000000000
+      internalID: -2361189316032382006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_26
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35503b48a289b9640800000000000000
+      internalID: 5087827512427480403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_27
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c2e70a09d5773e0800000000000000
+      internalID: -2056071829122044894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_28
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7250d44dc53db0360800000000000000
+      internalID: 7137030430150952231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_29
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6671797a8d219b0800000000000000
+      internalID: -5110784412806060337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_30
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74843712313f30260800000000000000
+      internalID: 7062755904138201159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_31
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 175
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba44522bace6d4ef0800000000000000
+      internalID: -122319798017899349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_32
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 143
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edafdbeb064cbc4d0800000000000000
+      internalID: -3113178797600539938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_33
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 143
+        width: 56
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5069203, y: 0.4727978}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149d0fd8b7320a8c0800000000000000
+      internalID: -3990150256280938175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_34
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 143
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f723513a0d5aad0800000000000000
+      internalID: -2691515803430125767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_35
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 143
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba96703e9a782e7c0800000000000000
+      internalID: -4043520351697147477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_36
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 146
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331972491c7d09500800000000000000
+      internalID: 401057593250255155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_37
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 143
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c942b7f77cb42f2a0800000000000000
+      internalID: -6705213574991895396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_38
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 142
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034be40a5430102b0800000000000000
+      internalID: -5620207262404529104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_39
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 142
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b2a78c644e6b180800000000000000
+      internalID: -9099835004393215141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_40
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 143
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151cfb09c823a9d80800000000000000
+      internalID: -8243220588642975407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_41
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 143
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35492b7554b932450800000000000000
+      internalID: 6062860245497189459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_42
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 143
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f01dcc2e142cb9f0800000000000000
+      internalID: -451446150624636679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 95
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2544717e1475e80800000000000000
+      internalID: -8190004936566353244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_44
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4621ada3e51f7d0800000000000000
+      internalID: -2886422279308024598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_45
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a4cc735517ee310800000000000000
+      internalID: 1436209942000061041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_46
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 95
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9170c7bddf7f63740800000000000000
+      internalID: 5131561495116384025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_47
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 94
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5243cfc4ecac0d0800000000000000
+      internalID: -3401679738480876093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_48
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 94
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f6891c86d51a7ba0800000000000000
+      internalID: -6090531534847506699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_49
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42368483aff738060800000000000000
+      internalID: 6954542962252997412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_50
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 95
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c8785d410946080800000000000000
+      internalID: -9195066120027534257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_51
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 95
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a43ba2661dc8740800000000000000
+      internalID: 5155725910165637641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_52
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d443272fd1fbb2cb0800000000000000
+      internalID: -4887602835238013875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_53
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31ad0db45ed78d50800000000000000
+      internalID: 6739599822913642813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_54
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 95
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539e8de58173f8e60800000000000000
+      internalID: 7966646843651713333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_55
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 95
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499e6234f4d050810800000000000000
+      internalID: 1730804265874024852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_56
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03d53d7366312ec0800000000000000
+      internalID: -3593531226734603506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_57
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0154df207e6572cc0800000000000000
+      internalID: -3735921815692950256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_58
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 95
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c2ed2ad97a27f40800000000000000
+      internalID: 5724822371825495059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_59
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 47
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9490187bde2b0ef0800000000000000
+      internalID: -140967443184970597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_60
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 47
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f01b07f52a174190800000000000000
+      internalID: -7978379464502734601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_61
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 47
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c3981108ad02bd0800000000000000
+      internalID: -2656883536563717019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_62
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 47
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24948d775bc2a200800000000000000
+      internalID: 189937710931416110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_63
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 47
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f7bcf3a8b4677070800000000000000
+      internalID: 8104056798664505329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_64
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 47
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff472b0375d90470800000000000000
+      internalID: 8361448873275117563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_65
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 47
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a58da8d62f78b30800000000000000
+      internalID: 4289663722388478590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_66
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 47
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f8d3b3a08c38b00800000000000000
+      internalID: 829726702635421449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_67
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 47
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613c5342def252310800000000000000
+      internalID: 1379561556420182806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_68
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 47
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ecdc9a5b432c330800000000000000
+      internalID: 3729601396258754059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_69
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 47
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f012e5e4d7177b0800000000000000
+      internalID: -5228259916860289210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_70
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 47
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6535700c0dc6877e0800000000000000
+      internalID: -1767543209912216746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_71
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 47
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef61f8a7bc55b93b0800000000000000
+      internalID: -5504711787107379458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_72
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 47
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95eb9085a28e789d0800000000000000
+      internalID: -2771991777059946919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_73
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 47
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a2a2deace328970800000000000000
+      internalID: 8755629666844945035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_74
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 47
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f56176364dcdfa20800000000000000
+      internalID: 3097857820145575412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_75
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 47
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355cf1d2c03ccb150800000000000000
+      internalID: 5889796869757846867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_76
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 47
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a023a1b9181ec40800000000000000
+      internalID: 5539851519801821740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_77
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 47
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2aec50f8d439bf00800000000000000
+      internalID: 1132994887610591788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_78
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 47
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78332c5f4e4acebe0800000000000000
+      internalID: -1446600077010127993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_79
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ce3c31990066480800000000000000
+      internalID: -8906430555616973756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_80
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b8806efef8e0650800000000000000
+      internalID: 6201051997455026980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_81
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643a37f407eef5760800000000000000
+      internalID: 7448934474830816070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_82
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 14
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f8bc365ab3cb8d0800000000000000
+      internalID: -2829320884365586542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_83
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 14
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c141ad5976a3fa0800000000000000
+      internalID: -5820225675116405734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_84
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 14
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5cc2845b8516b80800000000000000
+      internalID: -8403337894073416272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_85
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94b3abcd69dcc360800000000000000
+      internalID: 7191361770595005594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_86
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd6c308d66787cd0800000000000000
+      internalID: -2560166175485170243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_87
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8263eef3c73988de0800000000000000
+      internalID: -1330651528030177752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_88
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe366b0a9a468f5a0800000000000000
+      internalID: -6487324583518641169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_89
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8db23c12ffcb00c0800000000000000
+      internalID: -4608361154921448051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsPurple_90
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 15
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48267c3ced875c2f0800000000000000
+      internalID: -953222847956295036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 71edc37834cee26449059022793c2e73
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ButtonsPurple_0: -7253445370477397514
+      ButtonsPurple_1: -4419580762407054573
+      ButtonsPurple_10: -8367935612702544146
+      ButtonsPurple_11: -2427994644149945018
+      ButtonsPurple_12: -858103400367528426
+      ButtonsPurple_13: 2499136243937788271
+      ButtonsPurple_14: 6466484837269063394
+      ButtonsPurple_15: -416265293913531443
+      ButtonsPurple_16: -6024807281726628033
+      ButtonsPurple_17: 8284017925293457882
+      ButtonsPurple_18: 1314510181073381137
+      ButtonsPurple_19: -7072525294677814040
+      ButtonsPurple_2: 3527142645251848069
+      ButtonsPurple_20: 1878712083438715208
+      ButtonsPurple_21: 7533911024412240800
+      ButtonsPurple_22: -4760153185992492468
+      ButtonsPurple_23: 2235535253191565301
+      ButtonsPurple_24: -6876402425209153998
+      ButtonsPurple_25: -2361189316032382006
+      ButtonsPurple_26: 5087827512427480403
+      ButtonsPurple_27: -2056071829122044894
+      ButtonsPurple_28: 7137030430150952231
+      ButtonsPurple_29: -5110784412806060337
+      ButtonsPurple_3: 9218087840278889020
+      ButtonsPurple_30: 7062755904138201159
+      ButtonsPurple_31: -122319798017899349
+      ButtonsPurple_32: -3113178797600539938
+      ButtonsPurple_33: -3990150256280938175
+      ButtonsPurple_34: -2691515803430125767
+      ButtonsPurple_35: -4043520351697147477
+      ButtonsPurple_36: 401057593250255155
+      ButtonsPurple_37: -6705213574991895396
+      ButtonsPurple_38: -5620207262404529104
+      ButtonsPurple_39: -9099835004393215141
+      ButtonsPurple_4: 3985541751858229644
+      ButtonsPurple_40: -8243220588642975407
+      ButtonsPurple_41: 6062860245497189459
+      ButtonsPurple_42: -451446150624636679
+      ButtonsPurple_43: -8190004936566353244
+      ButtonsPurple_44: -2886422279308024598
+      ButtonsPurple_45: 1436209942000061041
+      ButtonsPurple_46: 5131561495116384025
+      ButtonsPurple_47: -3401679738480876093
+      ButtonsPurple_48: -6090531534847506699
+      ButtonsPurple_49: 6954542962252997412
+      ButtonsPurple_5: -3743401088535622622
+      ButtonsPurple_50: -9195066120027534257
+      ButtonsPurple_51: 5155725910165637641
+      ButtonsPurple_52: -4887602835238013875
+      ButtonsPurple_53: 6739599822913642813
+      ButtonsPurple_54: 7966646843651713333
+      ButtonsPurple_55: 1730804265874024852
+      ButtonsPurple_56: -3593531226734603506
+      ButtonsPurple_57: -3735921815692950256
+      ButtonsPurple_58: 5724822371825495059
+      ButtonsPurple_59: -140967443184970597
+      ButtonsPurple_6: 6275417054635221795
+      ButtonsPurple_60: -7978379464502734601
+      ButtonsPurple_61: -2656883536563717019
+      ButtonsPurple_62: 189937710931416110
+      ButtonsPurple_63: 8104056798664505329
+      ButtonsPurple_64: 8361448873275117563
+      ButtonsPurple_65: 4289663722388478590
+      ButtonsPurple_66: 829726702635421449
+      ButtonsPurple_67: 1379561556420182806
+      ButtonsPurple_68: 3729601396258754059
+      ButtonsPurple_69: -5228259916860289210
+      ButtonsPurple_7: -7747922298434485609
+      ButtonsPurple_70: -1767543209912216746
+      ButtonsPurple_71: -5504711787107379458
+      ButtonsPurple_72: -2771991777059946919
+      ButtonsPurple_73: 8755629666844945035
+      ButtonsPurple_74: 3097857820145575412
+      ButtonsPurple_75: 5889796869757846867
+      ButtonsPurple_76: 5539851519801821740
+      ButtonsPurple_77: 1132994887610591788
+      ButtonsPurple_78: -1446600077010127993
+      ButtonsPurple_79: -8906430555616973756
+      ButtonsPurple_8: -6681379343528501156
+      ButtonsPurple_80: 6201051997455026980
+      ButtonsPurple_81: 7448934474830816070
+      ButtonsPurple_82: -2829320884365586542
+      ButtonsPurple_83: -5820225675116405734
+      ButtonsPurple_84: -8403337894073416272
+      ButtonsPurple_85: 7191361770595005594
+      ButtonsPurple_86: -2560166175485170243
+      ButtonsPurple_87: -1330651528030177752
+      ButtonsPurple_88: -6487324583518641169
+      ButtonsPurple_89: -4608361154921448051
+      ButtonsPurple_9: -6314220787609163807
+      ButtonsPurple_90: -953222847956295036
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
