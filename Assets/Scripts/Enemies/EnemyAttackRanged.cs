@@ -2,73 +2,105 @@
 
 public class EnemyAttackRanged : MonoBehaviour
 {
-    [Header("Ranged Attack Settings")]
-    public GameObject projectilePrefab;   // viên đạn
-    public Transform shootPoint;          // nơi bắn ra
-    public float shootForce = 7f;
-    public float fireRate = 1.3f;
+    [Header("Attack Settings")]
+    public Transform shotPoint;           // chỗ bắn bullet
+    public GameObject[] bulletPool;      // mảng bullet đã đặt sẵn trong scene
+    public float attackCooldown = 1f;    // thời gian giữa 2 lần bắn
 
-    private float lastFireTime = 0f;
-    private bool playerInRange = false;
-
-    private Transform player;
+    private float lastShootTime;
+    private Transform target;            // player trong tầm
     private Animator anim;
+    private EnemyHealth health;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        health = GetComponent<EnemyHealth>();
+    }
+
+    /// <summary>
+    /// Gọi từ EnemyRangedZone khi player vào/ra attack zone
+    /// </summary>
+    public void SetPlayerInRange(bool inRange, Transform player)
+    {
+        target = inRange ? player : null;
     }
 
     private void Update()
     {
-        if (!playerInRange) return;
+        // Chết rồi thì không bắn nữa
+        if (health != null && health.IsDead) return;
 
-        // Player đã chết hoặc bị destroy
-        if (player == null)
+        // Không có player trong tầm thì không làm gì
+        if (target == null) return;
+
+        // Đủ cooldown thì cho phép bắn (gọi animation attack)
+        if (Time.time >= lastShootTime + attackCooldown)
         {
-            playerInRange = false;
+            // Gọi animation Attack – animation sẽ gọi event Shoot()
+            if (anim != null)
+            {
+                anim.SetTrigger("attack");
+            }
+
+            lastShootTime = Time.time;
+        }
+    }
+
+    /// <summary>
+    /// HÀM NÀY GỌI BẰNG ANIMATION EVENT trong Minator2 attack
+    /// </summary>
+    public void Shoot()
+    {
+        if (shotPoint == null)
+        {
+            Debug.LogWarning("❌ shotPoint chưa gán trên EnemyAttackRanged");
             return;
         }
 
-        // Bắn
-        if (Time.time >= lastFireTime + fireRate)
+        if (target == null)
         {
-            Shoot();
-            lastFireTime = Time.time;
-        }
-    }
-
-    // Zone sẽ gọi hàm này
-    public void SetPlayerInRange(bool isInRange, Transform target)
-    {
-        playerInRange = isInRange;
-        player = target;
-    }
-
-    private void Shoot()
-    {
-        if (projectilePrefab == null || shootPoint == null) return;
-
-        anim.SetTrigger("attack");
-
-        // Spawn đạn
-        GameObject bullet = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
-
-        // Check nếu bullet bị destroy bất thường
-        if (bullet == null) return;
-
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            // bay theo hướng player
-            Vector2 dir = (player.position - shootPoint.position).normalized;
-            rb.linearVelocity = dir * shootForce;
+            // Player đã đi khỏi zone đúng lúc animation tới frame bắn
+            return;
         }
 
-        // Xoay enemy theo hướng player
-        if (player.position.x > transform.position.x)
-            transform.localScale = new Vector3(1, 1, 1);
-        else
-            transform.localScale = new Vector3(-1, 1, 1);
+        GameObject bullet = GetBulletFromPool();
+        if (bullet == null)
+        {
+            Debug.LogWarning("⚠ Bullet Pool hết đạn!");
+            return;
+        }
+
+        // Đặt vị trí & xoay cho bullet
+        bullet.transform.position = shotPoint.position;
+        bullet.transform.rotation = shotPoint.rotation;
+
+        // Tính hướng bắn theo vị trí player (trái / phải)
+        float dirX = Mathf.Sign(target.position.x - transform.position.x);
+        Vector2 dir = new Vector2(dirX, 0f);
+
+        Bullet bulletComp = bullet.GetComponent<Bullet>();
+        if (bulletComp != null)
+        {
+            bulletComp.SetDirection(dir);
+        }
+
+        bullet.SetActive(true);
+    }
+
+    /// <summary>
+    /// Lấy 1 viên bullet chưa active trong pool
+    /// </summary>
+    private GameObject GetBulletFromPool()
+    {
+        foreach (GameObject b in bulletPool)
+        {
+            if (b != null && !b.activeInHierarchy)
+            {
+                return b;
+            }
+        }
+
+        return null; // hết đạn thì return null
     }
 }
