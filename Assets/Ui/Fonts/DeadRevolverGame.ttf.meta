@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: da7655f1224f4be40b0333f5113ab5f4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Dead Revolver Game
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a8cbd939e35e1b3418171e778326a556, type: 3}
+  customCharacters: 
+  fontRenderingMode: 2
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

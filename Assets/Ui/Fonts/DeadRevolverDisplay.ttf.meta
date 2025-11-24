@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a651cd0adfe7f8c40b2fb0cd7a4afec1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 12
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Dead Revolver Display
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d9c2badbc26c78742a4ac7c6b5960a77, type: 3}
+  customCharacters: 
+  fontRenderingMode: 2
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
