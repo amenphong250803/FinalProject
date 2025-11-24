@@ -63,7 +63,7 @@ public class EnemyPatrol : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         anim.SetBool("walk", false);
-        anim.Play("Minator2 idle");  // idle cho chắc chắn
+        anim.Play("idle");  // idle cho chắc chắn
 
         yield return new WaitForSeconds(idleTime);
 

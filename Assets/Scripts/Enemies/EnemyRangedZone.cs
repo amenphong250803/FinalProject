@@ -1,27 +1,36 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyRangedZone : MonoBehaviour
 {
-    private EnemyAttackRanged ranged;
+    private EnemyAttackRanged enemy;
 
     private void Awake()
     {
-        ranged = GetComponentInParent<EnemyAttackRanged>();
+        // Tìm EnemyAttackRanged trên object cha (enemy)
+        enemy = GetComponentInParent<EnemyAttackRanged>();
+        if (enemy == null)
+        {
+            Debug.LogError("❌ EnemyRangedZone không tìm thấy EnemyAttackRanged ở parent!");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (enemy == null) return;
+
         if (other.CompareTag("Player"))
         {
-            ranged.SetPlayerInRange(true, other.transform);
+            enemy.SetPlayerInRange(true, other.transform);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (enemy == null) return;
+
         if (other.CompareTag("Player"))
         {
-            ranged.SetPlayerInRange(false, null);
+            enemy.SetPlayerInRange(false, null);
         }
     }
 }
