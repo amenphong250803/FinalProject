@@ -29,7 +29,7 @@ public class EnemyAttackRanged : MonoBehaviour
     private void Update()
     {
         // Chết rồi thì không bắn nữa
-        if (health != null && health.IsDead) return;
+        //if (health != null && health.IsDead) return;
 
         // Không có player trong tầm thì không làm gì
         if (target == null) return;

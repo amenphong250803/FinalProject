@@ -2,22 +2,18 @@ using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
-    public Animator anim {  get; private set; }
-
-    public Rigidbody2D rb { get; private set; }
-
     public PlayerInputSet input { get; private set; }
-
-    private StateMachine stateMachine;
-
     public Player_IdleState idleState { get; private set; }
     public Player_MoveState moveState { get; private set; }
 
     public Player_JumpState jumpState { get; private set; }
     public Player_FallState fallState { get; private set; }
     public Player_BasicAttackState basicAttackState { get; private set; }
+
+    public Player_DeadState deadState { get; private set; }
+
 
     [Header("Attack details")]
     public Vector2[] attackVelocity;
@@ -29,22 +25,13 @@ public class Player : MonoBehaviour
     [Header("Movement details")]
     public float moveSpeed;
     public float jumpForce = 5;
-    private bool facingRight = true;
 
     public Vector2 moveInput { get; private set; }
-    public int facingDir { get; private set; } = 1;
 
-    [Header("Collision detection")]
-    [SerializeField] private float groundCheckDistance;
-    [SerializeField] private LayerMask whatIsGround;
-    public bool groundDetected { get; private set; }
-
-    private void Awake()
+    protected override void Awake()
     {
-        anim = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        base.Awake();
 
-        stateMachine = new StateMachine();
         input = new PlayerInputSet();
 
         idleState = new Player_IdleState(this, stateMachine, "idle");
@@ -53,36 +40,24 @@ public class Player : MonoBehaviour
         jumpState = new Player_JumpState(this, stateMachine, "jumpFall");
         fallState = new Player_FallState(this, stateMachine, "jumpFall");
         basicAttackState = new Player_BasicAttackState(this, stateMachine, "basicAttack");
-
+        deadState = new Player_DeadState(this, stateMachine, "dead");
     }
 
-    private void OnEnable()
+    protected override void Start()
     {
-        input.Enable();
-
-        input.Player.Movement.performed += context => moveInput = context.ReadValue<Vector2>();
-        input.Player.Movement.canceled += context => moveInput = Vector2.zero;
-    }
-
-    private void OnDisable()
-    {
-        input.Disable();
-    }
-
-    private void Start()
-    {
+        base.Start();
         stateMachine.Initialize(idleState);
     }
 
-    private void Update()
+    public override void EntityDeath()
     {
-        HandleCollisionDetection();
-        stateMachine.UpdateActiveState();
+        base.EntityDeath();
+        stateMachine.ChangeState(deadState);
     }
 
     public void EnterAttackStateWithDelay()
     {
-        if(queuedAttackCo != null)
+        if (queuedAttackCo != null)
         {
             StopCoroutine(queuedAttackCo);
         }
@@ -96,41 +71,17 @@ public class Player : MonoBehaviour
         stateMachine.ChangeState(basicAttackState);
     }
 
-    public void CallAnimationTrigger()
+
+    private void OnEnable()
     {
-        stateMachine.currentState.CallAnimationTrigger();
+        input.Enable();
+
+        input.Player.Movement.performed += context => moveInput = context.ReadValue<Vector2>();
+        input.Player.Movement.canceled += context => moveInput = Vector2.zero;
     }
 
-    public void SetVelocity(float xVelocity, float yVelocity)
+    private void OnDisable()
     {
-        rb.linearVelocity = new Vector2(xVelocity, yVelocity);
-        HandleFlip(xVelocity);
-    }
-
-    private void HandleFlip(float xVelocity)
-    {
-        if(xVelocity > 0 && facingRight == false)
-        {
-            Flip();
-        } else if(xVelocity < 0 && facingRight)
-        {
-            Flip();
-        }
-    }
-    private void Flip()
-    {
-        transform.Rotate(0, 180, 0);
-        facingRight = !facingRight;
-        facingDir = facingDir * -1;
-    }
-
-    private void HandleCollisionDetection()
-    {
-        groundDetected = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, whatIsGround);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(transform.position, transform.position + new Vector3(0, -groundCheckDistance));
+        input.Disable();
     }
 }

@@ -1,47 +1,37 @@
 ﻿using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : Entity_Health
 {
-    public int maxHP = 100;
-    public int currentHP;
-    public bool IsDead { get; private set; }
-
     Animator anim;
     EnemyPatrol patrol;
     Rigidbody2D rb;
 
-    void Awake()
+    public bool IsDead { get; internal set; }
+
+    protected override void Awake()
     {
+        base.Awake();
         anim = GetComponent<Animator>();
         patrol = GetComponent<EnemyPatrol>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Start()
+    public override void TakeDamage(float dmg)
     {
-        currentHP = maxHP;
-    }
+        if (isDead) return;
 
-    public void TakeDamage(int dmg)
-    {
-        if (IsDead) return;
+        base.TakeDamage(dmg);
 
-        currentHP -= dmg;
-        if (currentHP <= 0)
-        {
-            currentHP = 0;
-            Die();
-        }
-        else
+        if (!isDead)
         {
             anim.SetTrigger("hurt");
         }
     }
 
-    void Die()
+    protected override void Die()
     {
-        if (IsDead) return;
-        IsDead = true;
+        if (isDead) return;
+        base.Die(); // set isDead = true
 
         // Stop patrol
         if (patrol != null)
@@ -51,8 +41,11 @@ public class EnemyHealth : MonoBehaviour
         }
 
         // Stop physics
-        rb.linearVelocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Static;
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Static;
+        }
 
         // Play animation once
         anim.ResetTrigger("attack");
@@ -61,4 +54,6 @@ public class EnemyHealth : MonoBehaviour
 
         Debug.Log("Enemy Died!");
     }
+
+
 }
