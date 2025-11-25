@@ -16,6 +16,12 @@ public class EnemyAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         hp = GetComponent<EnemyHealth>();
+
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            target = playerObj.transform;
+        }
     }
 
     private void Update()
@@ -23,12 +29,14 @@ public class EnemyAttack : MonoBehaviour
         if (hp.IsDead) return;
         if (!canAttack) return;
 
+        if (target == null) return;
+
         // đánh nếu đến cooldown
         if (Time.time >= lastAttack + attackCooldown)
         {
             anim.SetTrigger("attack");
 
-            PlayerHealth p = target.GetComponent<PlayerHealth>();
+            Entity_Health p = target.GetComponent<Entity_Health>();
             if (p != null)
             {
                 p.TakeDamage(damage);
