@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GandalfHardcore Animated Water Tiles_0: -5438799934320087916
+      GandalfHardcore Animated Water Tiles_1: 3650467725007772875
+      GandalfHardcore Animated Water Tiles_2: 1865782158548404615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

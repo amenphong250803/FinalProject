@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hot air balloon_0: -2013038174833826326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

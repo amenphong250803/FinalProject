@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Entity_Health : MonoBehaviour
 {
+    private Slider healthBar;
     private Entity entity;
     private Entity_VFX entityVfx;
 
@@ -16,7 +18,10 @@ public class Entity_Health : MonoBehaviour
     {
         entityVfx = GetComponent<Entity_VFX>();
         entity = GetComponent<Entity>();
+        healthBar = GetComponentInChildren<Slider>();
+
         currentHp = maxHp;
+        UpdatehealthBar();
     }
 
     public virtual void TakeDamage(float damage)
@@ -33,7 +38,7 @@ public class Entity_Health : MonoBehaviour
     protected void ReduceHp(float damage)
     {
         currentHp = currentHp - damage;
-
+        UpdatehealthBar();
         if (currentHp <= 0)
         {
             currentHp = 0;
@@ -46,6 +51,11 @@ public class Entity_Health : MonoBehaviour
         isDead = true;
         if (entity != null)
             entity.EntityDeath();
+    }
+
+    private void UpdatehealthBar()
+    {
+        healthBar.value = currentHp / maxHp;
     }
 
     public bool IsDead => isDead;
