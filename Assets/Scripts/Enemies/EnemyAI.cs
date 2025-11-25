@@ -94,7 +94,7 @@ public class EnemyAI : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, LayerMask.GetMask("Player"));
         if (hit)
         {
-            PlayerHealth hp = hit.GetComponent<PlayerHealth>();
+            Entity_Health hp = hit.GetComponent<Entity_Health>();
             if (hp != null)
                 hp.TakeDamage(10);
         }

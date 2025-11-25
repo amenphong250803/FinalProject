@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - SpawnPoint
-  - Rooms
   - Enemy
   - Ground
+  - Wall
   layers:
   - Default
   - TransparentFX
