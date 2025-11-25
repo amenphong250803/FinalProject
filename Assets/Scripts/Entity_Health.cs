@@ -12,6 +12,8 @@ public class Entity_Health : MonoBehaviour
     [SerializeField] protected float currentHp;
     [SerializeField] protected bool isDead;
 
+    protected bool isInvulnerable = false;
+
 
 
     protected virtual void Awake()
@@ -26,7 +28,7 @@ public class Entity_Health : MonoBehaviour
 
     public virtual void TakeDamage(float damage)
     {
-        if (isDead)
+        if (isDead || isInvulnerable)
         {
             return;
         }
@@ -51,6 +53,10 @@ public class Entity_Health : MonoBehaviour
         isDead = true;
         if (entity != null)
             entity.EntityDeath();
+    }
+    public void SetInvulnerable(bool value)
+    {
+        isInvulnerable = value;
     }
 
     private void UpdatehealthBar()

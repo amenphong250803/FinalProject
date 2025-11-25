@@ -8,11 +8,13 @@ public class EnemyPatrol : MonoBehaviour
 
     [Header("Movement")]
     public float speed = 2f;
-    public float idleTime = 2f;   // đứng im tại point
+    public float idleTime = 2f;
+
+    [Header("Model (only flip this)")]
+    public Transform model;
 
     private Rigidbody2D rb;
     private Animator anim;
-    private Vector3 baseScale;
 
     private bool movingRight = true;
     private bool isIdle = false;
@@ -21,11 +23,8 @@ public class EnemyPatrol : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-
-        // scale chuẩn (không bao giờ thay đổi trừ flip)
-        baseScale = new Vector3(0.8f, 0.8f, 1f);
-        transform.localScale = baseScale;
+        anim = GetComponentInChildren<Animator>();
+        // Scale ban đầu của model chỉnh luôn trong Inspector cũng được
     }
 
     private void Update()
@@ -46,14 +45,14 @@ public class EnemyPatrol : MonoBehaviour
             rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
 
             if (transform.position.x >= rightX)
-                StartCoroutine(IdleAtPoint(false)); // chuyển sang đi trái
+                StartCoroutine(IdleAtPoint(false));
         }
         else
         {
             rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
 
             if (transform.position.x <= leftX)
-                StartCoroutine(IdleAtPoint(true)); // chuyển sang đi phải
+                StartCoroutine(IdleAtPoint(true));
         }
     }
 
@@ -63,7 +62,7 @@ public class EnemyPatrol : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         anim.SetBool("walk", false);
-        anim.Play("idle");  // idle cho chắc chắn
+        anim.Play("idle");
 
         yield return new WaitForSeconds(idleTime);
 
@@ -75,12 +74,14 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Flip(int dir)
     {
-        // dir = 1 phải, -1 trái — KHÔNG bao giờ thay baseScale
-        transform.localScale = new Vector3(
-            baseScale.x * dir,
-            baseScale.y,
-            baseScale.z
-        );
+        if (model != null)
+        {
+            model.localScale = new Vector3(
+                Mathf.Abs(model.localScale.x) * dir,
+                model.localScale.y,
+                model.localScale.z
+            );
+        }
     }
 
     public void StopMoving()

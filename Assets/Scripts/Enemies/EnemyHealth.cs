@@ -9,10 +9,12 @@ public class EnemyHealth : Entity_Health
     protected override void Awake()
     {
         base.Awake();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
+
         patrol = GetComponent<EnemyPatrol>();
         rb = GetComponent<Rigidbody2D>();
     }
+
 
     public override void TakeDamage(float dmg)
     {
