@@ -384,7 +384,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GandalfHardcore Portal sheet_0: 7982529604382452484
+      GandalfHardcore Portal sheet_1: 3112881697293573092
+      GandalfHardcore Portal sheet_10: 3508036071605046642
+      GandalfHardcore Portal sheet_2: 6391050010181652356
+      GandalfHardcore Portal sheet_3: -3695036991864030299
+      GandalfHardcore Portal sheet_4: -6725342436241469424
+      GandalfHardcore Portal sheet_5: 8270057224887732137
+      GandalfHardcore Portal sheet_6: -4570235268861209988
+      GandalfHardcore Portal sheet_7: -3650382923859178628
+      GandalfHardcore Portal sheet_8: -7365833549939247313
+      GandalfHardcore Portal sheet_9: 1487052690359454931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

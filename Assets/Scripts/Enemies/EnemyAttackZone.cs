@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyAttackZone : MonoBehaviour
 {
@@ -7,10 +7,13 @@ public class EnemyAttackZone : MonoBehaviour
     private void Awake()
     {
         enemyAttack = GetComponentInParent<EnemyAttack>();
+        if (enemyAttack == null)
+            Debug.LogError("EnemyAttackZone không tìm thấy EnemyAttack ở parent: " + name);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Player"))
         {
             enemyAttack.canAttack = true;
