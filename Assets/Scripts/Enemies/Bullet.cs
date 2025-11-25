@@ -46,7 +46,7 @@ public class Bullet : MonoBehaviour
         // Gây damage lên player
         if (other.CompareTag("Player"))
         {
-            PlayerHealth hp = other.GetComponent<PlayerHealth>();
+            Entity_Health hp = other.GetComponent<Entity_Health>();
             if (hp != null)
             {
                 hp.TakeDamage(damage);
@@ -54,7 +54,7 @@ public class Bullet : MonoBehaviour
 
             gameObject.SetActive(false);
         }
-        else if (other.CompareTag("Ground") || other.CompareTag("Wall"))
+        else if (other.CompareTag("Ground"))
         {
             // Đụng tường/ground thì tắt
             gameObject.SetActive(false);

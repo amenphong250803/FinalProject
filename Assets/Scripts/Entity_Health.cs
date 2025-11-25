@@ -4,13 +4,17 @@ using UnityEngine;
 public class Entity_Health : MonoBehaviour
 {
     private Entity entity;
+    private Entity_VFX entityVfx;
 
     [SerializeField] protected float maxHp = 100;
     [SerializeField] protected float currentHp;
     [SerializeField] protected bool isDead;
 
+
+
     protected virtual void Awake()
     {
+        entityVfx = GetComponent<Entity_VFX>();
         entity = GetComponent<Entity>();
         currentHp = maxHp;
     }
@@ -22,6 +26,7 @@ public class Entity_Health : MonoBehaviour
             return;
         }
 
+        entityVfx?.PlayOnDamageVfx();
         ReduceHp(damage);
     }
 

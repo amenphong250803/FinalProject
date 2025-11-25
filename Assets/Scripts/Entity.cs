@@ -43,7 +43,7 @@ public class Entity : MonoBehaviour
 
     public virtual void EntityDeath()
     {
-        
+
     }
 
     public void SetVelocity(float xVelocity, float yVelocity)
