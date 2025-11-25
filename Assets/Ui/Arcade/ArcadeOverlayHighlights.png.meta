@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ArcadeOverlayHighlights_0: -5901137973161384102
+      ArcadeOverlayHighlights_1: 2161860234971185842
+      ArcadeOverlayHighlights_2: -6590161081930312941
+      ArcadeOverlayHighlights_3: -1374662008452661065
+      ArcadeOverlayHighlights_4: -4497601085520319876
+      ArcadeOverlayHighlights_5: -4626548937804566542
+      ArcadeOverlayHighlights_6: 7430686921210250325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

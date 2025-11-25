@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ArcadeOverlayShadows_0: 1211728575828937883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
