@@ -14,6 +14,7 @@ public class Entity : MonoBehaviour
     [Header("Collision detection")]
     [SerializeField] protected LayerMask whatIsGround;
     [SerializeField] private float groundCheckDistance;
+    [SerializeField] private Transform groundCheck;
     public bool groundDetected { get; private set; }
 
     protected virtual void Awake()
@@ -73,6 +74,7 @@ public class Entity : MonoBehaviour
     private void HandleCollisionDetection()
     {
         groundDetected = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, whatIsGround);
+
     }
 
     protected virtual void OnDrawGizmos()

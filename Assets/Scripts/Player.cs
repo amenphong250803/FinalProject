@@ -10,6 +10,8 @@ public class Player : Entity
 
     public Player_JumpState jumpState { get; private set; }
     public Player_FallState fallState { get; private set; }
+
+    public Player_DashState dashState { get; private set; }
     public Player_BasicAttackState basicAttackState { get; private set; }
 
     public Player_DeadState deadState { get; private set; }
@@ -25,6 +27,9 @@ public class Player : Entity
     [Header("Movement details")]
     public float moveSpeed;
     public float jumpForce = 5;
+    [Space]
+    public float dashDuration = .25f;
+    public float dashSpeed = 20;
 
     public Vector2 moveInput { get; private set; }
 
@@ -41,6 +46,7 @@ public class Player : Entity
         fallState = new Player_FallState(this, stateMachine, "jumpFall");
         basicAttackState = new Player_BasicAttackState(this, stateMachine, "basicAttack");
         deadState = new Player_DeadState(this, stateMachine, "dead");
+        dashState = new Player_DashState(this, stateMachine, "dash");
     }
 
     protected override void Start()
