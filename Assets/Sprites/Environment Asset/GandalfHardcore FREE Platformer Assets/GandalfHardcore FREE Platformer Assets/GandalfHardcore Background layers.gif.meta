@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GandalfHardcore Background layers_0: 8037626042757948524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

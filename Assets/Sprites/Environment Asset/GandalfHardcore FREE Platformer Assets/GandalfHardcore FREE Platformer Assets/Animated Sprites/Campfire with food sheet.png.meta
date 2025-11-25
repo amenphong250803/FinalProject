@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Campfire with food sheet_0: 4720446883516571768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Large Tent_0: 4658788899825394075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

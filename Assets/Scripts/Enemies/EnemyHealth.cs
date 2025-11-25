@@ -6,8 +6,6 @@ public class EnemyHealth : Entity_Health
     EnemyPatrol patrol;
     Rigidbody2D rb;
 
-    public bool IsDead { get; internal set; }
-
     protected override void Awake()
     {
         base.Awake();
@@ -31,29 +29,25 @@ public class EnemyHealth : Entity_Health
     protected override void Die()
     {
         if (isDead) return;
-        base.Die(); // set isDead = true
 
-        // Stop patrol
+        base.Die(); // làm isDead = true
+
         if (patrol != null)
         {
             patrol.StopMoving();
             patrol.enabled = false;
         }
 
-        // Stop physics
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
         }
 
-        // Play animation once
         anim.ResetTrigger("attack");
         anim.ResetTrigger("hurt");
         anim.SetTrigger("dead");
 
-        Debug.Log("Enemy Died!");
+        Debug.Log("Enemy Died");
     }
-
-
 }
