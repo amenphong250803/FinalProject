@@ -2,7 +2,7 @@
 
 public class BulletPool : MonoBehaviour
 {
-    public static BulletPool Instance;
+    public static BulletPool In;
 
     public GameObject bulletPrefab;
     public int poolSize = 30;
@@ -11,7 +11,7 @@ public class BulletPool : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        In = this;
         pool = new GameObject[poolSize];
 
         for (int i = 0; i < poolSize; i++)
