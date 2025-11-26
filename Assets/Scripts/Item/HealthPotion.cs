@@ -1,20 +1,20 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HealthPotion : MonoBehaviour
 {
-    public float healAmount = 50f; 
-    public bool destroyOnUse = true;
+    public int potionAmount = 1;   
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Entity_Health health = other.GetComponent<Entity_Health>();
+        if (!other.CompareTag("Player"))
+            return;
 
-        if (health != null && !health.IsDead)
+        PlayerPotionHandler potionHandler = other.GetComponent<PlayerPotionHandler>();
+
+        if (potionHandler != null)
         {
-            health.Heal(healAmount);
-
-            if (destroyOnUse)
-                Destroy(gameObject);
+            potionHandler.AddPotion(potionAmount);
+            Destroy(gameObject);
         }
     }
 }
