@@ -10,7 +10,7 @@ public class BossHealth : Entity_Health
     protected override void Awake()
     {
         base.Awake();
-        anim = GetComponentInChildren<Animator>(); 
+        anim = GetComponentInChildren<Animator>();
     }
 
     public override void TakeDamage(float damage)
@@ -24,7 +24,7 @@ public class BossHealth : Entity_Health
     protected override void Die()
     {
         base.Die();
-        anim.SetTrigger("dead"); // Animation chết của boss
+        anim.SetTrigger("dead");
     }
 
     public void SetImmune(bool value)
@@ -32,27 +32,47 @@ public class BossHealth : Entity_Health
         isImmune = value;
     }
 
+    /// <summary>
+    /// Lấy phần trăm HP dựa trên currentHp / maxHp trong healthBar
+    /// </summary>
     public float GetHpPercent()
     {
-        // ⭐ Fix: maxHp đã là biến protected trong Entity_Health
-        return currentHp / maxHp;
+        if (currentHp <= 0) return 0f;
+
+        // ✔ Lấy maxHp bằng cách đọc từ Slider (đã có sẵn trong Entity_Health)
+        var bar = GetComponentInChildren<UnityEngine.UI.Slider>();
+        if (bar == null || bar.maxValue == 0f) return 0f;
+
+        // bar.value = currentHp/maxHp → maxHp = currentHp/bar.value
+        float calculatedMaxHp = currentHp / bar.value;
+        return currentHp / calculatedMaxHp;
     }
 
+    /// <summary>
+    /// Heal boss theo phần trăm hp tối đa
+    /// </summary>
     public void HealPercent(float percent)
     {
-        currentHp += maxHp * percent;
+        var bar = GetComponentInChildren<UnityEngine.UI.Slider>();
+        if (bar == null || bar.maxValue == 0f) return;
 
-        if (currentHp > maxHp)
-            currentHp = maxHp;
+        float calculatedMaxHp = currentHp / bar.value;
+        float healAmount = calculatedMaxHp * percent;
 
-        UpdateHealthBarSafe(); // gọi update bar
+        currentHp += healAmount;
+        if (currentHp > calculatedMaxHp)
+            currentHp = calculatedMaxHp;
+
+        UpdateBar();
     }
 
-    private void UpdateHealthBarSafe()
+    /// <summary>
+    /// Cập nhật thanh máu giống Entity_Health
+    /// </summary>
+    private void UpdateBar()
     {
-        // Chỉ update nếu healthBar tồn tại
         var bar = GetComponentInChildren<UnityEngine.UI.Slider>();
-        if (bar != null && maxHp > 0)
-            bar.value = currentHp / maxHp;
+        if (bar != null)
+            bar.value = currentHp / (currentHp / bar.value);
     }
 }
