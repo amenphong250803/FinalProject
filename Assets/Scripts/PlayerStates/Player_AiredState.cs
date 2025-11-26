@@ -11,7 +11,13 @@ public class Player_AiredState : PlayerState
     {
         base.Update();
 
-        if(player.moveInput.x != 0)
+        if (input.Player.Jump.WasPerformedThisFrame() && player.jumpCount < player.maxJumps)
+        {
+            stateMachine.ChangeState(player.jumpState);
+            return;
+        }
+
+        if (player.moveInput.x != 0)
         {
             player.SetVelocity(player.moveInput.x * player.moveSpeed, rb.linearVelocity.y);
         }
