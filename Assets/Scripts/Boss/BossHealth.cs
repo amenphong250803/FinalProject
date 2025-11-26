@@ -10,7 +10,7 @@ public class BossHealth : Entity_Health
     protected override void Awake()
     {
         base.Awake();
-        anim = GetComponentInChildren<Animator>(); // ⭐ LẤY ANIM Ở CHILD
+        anim = GetComponentInChildren<Animator>(); 
     }
 
     public override void TakeDamage(float damage)
@@ -24,7 +24,7 @@ public class BossHealth : Entity_Health
     protected override void Die()
     {
         base.Die();
-        anim.SetTrigger("dead"); // chạy animation chết
+        anim.SetTrigger("dead"); // Animation chết của boss
     }
 
     public void SetImmune(bool value)
@@ -34,13 +34,25 @@ public class BossHealth : Entity_Health
 
     public float GetHpPercent()
     {
+        // ⭐ Fix: maxHp đã là biến protected trong Entity_Health
         return currentHp / maxHp;
     }
 
     public void HealPercent(float percent)
     {
         currentHp += maxHp * percent;
+
         if (currentHp > maxHp)
             currentHp = maxHp;
+
+        UpdateHealthBarSafe(); // gọi update bar
+    }
+
+    private void UpdateHealthBarSafe()
+    {
+        // Chỉ update nếu healthBar tồn tại
+        var bar = GetComponentInChildren<UnityEngine.UI.Slider>();
+        if (bar != null && maxHp > 0)
+            bar.value = currentHp / maxHp;
     }
 }
