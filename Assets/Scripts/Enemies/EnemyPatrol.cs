@@ -23,8 +23,10 @@ public class EnemyPatrol : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
-        // Scale ban đầu của model chỉnh luôn trong Inspector cũng được
+        anim = GetComponent<Animator>();
+
+        baseScale = new Vector3(0.8f, 0.8f, 1f);
+        transform.localScale = baseScale;
     }
 
     private void Update()
@@ -61,8 +63,8 @@ public class EnemyPatrol : MonoBehaviour
         isIdle = true;
         rb.linearVelocity = Vector2.zero;
 
+        // Không PLAY state nữa — chỉ cần tắt walk là về idle
         anim.SetBool("walk", false);
-        anim.Play("idle");
 
         yield return new WaitForSeconds(idleTime);
 
@@ -74,14 +76,11 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Flip(int dir)
     {
-        if (model != null)
-        {
-            model.localScale = new Vector3(
-                Mathf.Abs(model.localScale.x) * dir,
-                model.localScale.y,
-                model.localScale.z
-            );
-        }
+        transform.localScale = new Vector3(
+            baseScale.x * dir,
+            baseScale.y,
+            baseScale.z
+        );
     }
 
     public void StopMoving()
