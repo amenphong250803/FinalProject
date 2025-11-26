@@ -8,11 +8,13 @@ public class EnemyPatrol : MonoBehaviour
 
     [Header("Movement")]
     public float speed = 2f;
-    public float idleTime = 2f;   // đứng im tại point
+    public float idleTime = 2f;
+
+    [Header("Model (only flip this)")]
+    public Transform model;
 
     private Rigidbody2D rb;
     private Animator anim;
-    private Vector3 baseScale;
 
     private bool movingRight = true;
     private bool isIdle = false;

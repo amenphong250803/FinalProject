@@ -6,6 +6,8 @@ public abstract class PlayerState : EntityState
     protected Player player;
     protected PlayerInputSet input;
 
+    protected Entity_Health health;
+
     public PlayerState(Player player, StateMachine stateMachine, string animBoolName) : base(stateMachine, animBoolName)
     {
         this.player = player;
@@ -13,11 +15,18 @@ public abstract class PlayerState : EntityState
         anim = player.anim;
         rb = player.rb;
         input = player.input;
+
+        health = player.GetComponent<Entity_Health>();
     }
 
     public override void Update()
     {
         base.Update();
+
+        if (input.Player.Dash.WasPressedThisFrame() && stateMachine.currentState != player.dashState)
+        {
+            stateMachine.ChangeState(player.dashState);
+        }
     }
 
     public override void UpdateAnimationParameters()
