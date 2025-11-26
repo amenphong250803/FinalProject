@@ -22,7 +22,6 @@ public class Stat
         flatModifier -= amount;
     }
 
-    // n?u mu?n set base t? code:
     public void SetBaseValue(float value)
     {
         baseValue = value;
