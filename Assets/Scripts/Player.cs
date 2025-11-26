@@ -31,6 +31,10 @@ public class Player : Entity
     public float dashDuration = .25f;
     public float dashSpeed = 20;
 
+    [Header("Jump Settings")]
+    public int maxJumps = 2;   
+    [HideInInspector] public int jumpCount = 0;
+
     public Vector2 moveInput { get; private set; }
 
     protected override void Awake()
