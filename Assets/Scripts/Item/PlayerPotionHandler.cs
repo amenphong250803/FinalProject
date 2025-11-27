@@ -79,7 +79,7 @@ public class PlayerPotionHandler : MonoBehaviour
         UpdatePotionUI();
     }
 
-    private void UpdatePotionUI()
+    public void UpdatePotionUI()
     {
         if (potionText != null)
             potionText.text = $"{currentPotions}";
