@@ -116,7 +116,17 @@ public class Entity_Health : MonoBehaviour
         }
     }
 
-    public float GetCurrentHp() => currentHp;
+    public float GetCurrentHp()
+    {
+        return currentHp;
+    }
+
+    public void SetCurrentHp(float value)
+    {
+        float maxHp = stats != null ? stats.GetMaxHealth() : value;
+        currentHp = Mathf.Clamp(value, 0, maxHp);
+        UpdatehealthBar();
+    }
 
     public float GetMaxHealth()
     {

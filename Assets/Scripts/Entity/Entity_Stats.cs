@@ -20,4 +20,14 @@ public class Entity_Stats : MonoBehaviour
     {
         return damage.GetValue();
     }
+
+    public float GetVitalityTotal()
+    {
+        return major.vitality.GetValue();
+    }
+
+    public void SetVitalityFromSave(float totalVitality)
+    {
+        major.vitality.SetBaseValue(totalVitality);
+    }
 }
