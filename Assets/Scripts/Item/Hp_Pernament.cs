@@ -1,25 +1,26 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class HealthPotion : MonoBehaviour
+public class Hp_Pernament : MonoBehaviour
 {
-    public int potionAmount = 1;   
+    public int amount = 1; 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
             return;
 
-        PlayerPotionHandler potionHandler = other.GetComponent<PlayerPotionHandler>();
+        PlayerPermanentHpHandler handler = other.GetComponent<PlayerPermanentHpHandler>();
 
-        if (potionHandler != null)
+        if (handler != null)
         {
-            potionHandler.AddPotion(potionAmount);
+            handler.AddPermanentHpItem(amount);
+
             if (FloatingTextManager.Instance != null)
             {
                 FloatingTextManager.Instance.ShowText(
-                    "+1",                         
+                    "+1",
                     other.transform.position + Vector3.up * 1.5f,
-                    Color.white              
+                    new Color(0.5f, 0.8f, 1f)
                 );
             }
 
