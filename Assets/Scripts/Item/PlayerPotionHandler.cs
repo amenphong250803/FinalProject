@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class PlayerPotionHandler : MonoBehaviour
 {
     private Entity_Health health;
 
+    [Header("UI")]
+    public TextMeshProUGUI potionText;
+
     [Header("Potion settings")]
-    public int maxPotions = 5;       // tối đa bao nhiêu bình
-    public float healAmount = 50f;   // mỗi bình hồi bao nhiêu máu
+    public int maxPotions = 5;
+    public float healAmount = 50f;
 
     [Header("Current state")]
-    public int currentPotions = 0;   // số bình hiện có (cho inspector nhìn chơi)
+    public int currentPotions = 0;
 
     private void Awake()
     {
@@ -18,11 +22,12 @@ public class PlayerPotionHandler : MonoBehaviour
         {
             Debug.LogError("PlayerPotionHandler: Không tìm thấy Entity_Health trên player!");
         }
+
+        UpdatePotionUI();
     }
 
     private void Update()
     {
-        // Bấm E để uống bình
         if (Input.GetKeyDown(KeyCode.E))
         {
             UsePotion();
@@ -32,10 +37,13 @@ public class PlayerPotionHandler : MonoBehaviour
     public void AddPotion(int amount)
     {
         currentPotions += amount;
+
         if (currentPotions > maxPotions)
             currentPotions = maxPotions;
 
         Debug.Log($"Nhặt bình máu, hiện có: {currentPotions}");
+
+        UpdatePotionUI();
     }
 
     private void UsePotion()
@@ -54,11 +62,26 @@ public class PlayerPotionHandler : MonoBehaviour
             return;
         }
 
-        // Uống bình
         currentPotions--;
         health.Heal(healAmount);
 
         Debug.Log($"Dùng 1 bình máu, còn lại: {currentPotions}");
+
+        if (FloatingTextManager.Instance != null)
+        {
+            FloatingTextManager.Instance.ShowText(
+                $"+{healAmount} HP",
+                transform.position + Vector3.up * 1.5f,
+                Color.green
+            );
+        }
+
+        UpdatePotionUI();
+    }
+
+    private void UpdatePotionUI()
+    {
+        if (potionText != null)
+            potionText.text = $"{currentPotions}";
     }
 }
-
