@@ -2,28 +2,26 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UiManager : MonoBehaviour
+public class MainMenuManager : MonoBehaviour
 {
-    [Header("Scene Names")]
-    public string gameSceneName = "SampleScene";
+    [Header("Scenes")]
+    public string gameSceneName = "SampleScene";  // tên scene game của bạn
 
     [Header("UI")]
     public Button continueButton;
 
     private void Start()
     {
-        // Kiểm tra xem có save không
+        // Nếu chưa có save thì disable nút Continue
         bool hasSave = PlayerPrefs.GetInt("HasSave", 0) == 1;
-
-        // Nếu không có save → disable Continue
         if (continueButton != null)
             continueButton.interactable = hasSave;
     }
 
     // Gắn vào nút Start Game
-    public void StartGame()
+    public void OnStartGame()
     {
-        // Xóa toàn bộ save để đảm bảo chơi mới
+        // 🔹 Xóa toàn bộ dữ liệu save để chơi mới
         PlayerPrefs.DeleteKey("Player_HP");
         PlayerPrefs.DeleteKey("Player_VIT");
         PlayerPrefs.DeleteKey("Player_Potions");
@@ -33,24 +31,25 @@ public class UiManager : MonoBehaviour
         PlayerPrefs.DeleteKey("Player_PosZ");
         PlayerPrefs.DeleteKey("HasSave");
 
-        // Load scene chơi game
+        // Vào lại SampleScene, PlayerSaveController.Start sẽ KHÔNG load nữa
         SceneManager.LoadScene(gameSceneName);
     }
 
     // Gắn vào nút Continue
-    public void ContinueGame()
+    public void OnContinue()
     {
         if (PlayerPrefs.GetInt("HasSave", 0) != 1)
         {
-            Debug.Log("❌ Không có save để continue");
+            Debug.Log("❌ Không có save để Continue");
             return;
         }
 
+        // Chỉ cần load scene game, trong đó PlayerSaveController tự autoLoadOnStart
         SceneManager.LoadScene(gameSceneName);
     }
 
-    // Nếu bạn có nút Quit
-    public void QuitGame()
+    // (Optional) Gắn vào nút Quit nếu có
+    public void OnQuit()
     {
         Application.Quit();
     }

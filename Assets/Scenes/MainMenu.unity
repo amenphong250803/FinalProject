@@ -426,7 +426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10120833, y: 0.75666267}
   m_AnchorMax: {x: 0.24047917, y: 0.8188956}
-  m_AnchoredPosition: {x: 159.24002, y: -21.415009}
+  m_AnchoredPosition: {x: 159.24005, y: -21.415009}
   m_SizeDelta: {x: 318.47, y: 42.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423871127
@@ -1078,7 +1078,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 617207306}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 978962926}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: ContinueGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &617207306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1604,6 +1616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a7d0fc9e5c82946a779e363d7df02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSceneName: SampleScene
+  continueButton: {fileID: 617207305}
 --- !u!1 &1045517581
 GameObject:
   m_ObjectHideFlags: 0
