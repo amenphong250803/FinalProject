@@ -67,6 +67,15 @@ public class PlayerPotionHandler : MonoBehaviour
 
         Debug.Log($"Dùng 1 bình máu, còn lại: {currentPotions}");
 
+        if (FloatingTextManager.Instance != null)
+        {
+            FloatingTextManager.Instance.ShowText(
+                $"+{healAmount} HP",
+                transform.position + Vector3.up * 1.5f,
+                Color.green
+            );
+        }
+
         UpdatePotionUI();
     }
 
