@@ -11,7 +11,7 @@ public class EnemyPatrol : MonoBehaviour
     public float idleTime = 2f;
 
     [Header("Model (only flip this)")]
-    public Transform model;  // ⭐ Animator nằm ở đây
+    public Transform model;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -20,13 +20,14 @@ public class EnemyPatrol : MonoBehaviour
 
     private bool movingRight = true;
     private bool isIdle = false;
-    private bool canMove = true;
+    public bool canMove = true;
+
+    private int defaultDirection = 1;   // ⭐ Hướng ban đầu
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // ⭐ FIX — Animator nằm trong Model
         if (model != null)
             anim = model.GetComponent<Animator>();
 
@@ -34,6 +35,9 @@ public class EnemyPatrol : MonoBehaviour
             Debug.LogError("❌ EnemyPatrol: MODEL không có Animator! " + name);
 
         baseScale = model != null ? model.localScale : new Vector3(1, 1, 1);
+
+        // ⭐ Lưu hướng ban đầu
+        defaultDirection = baseScale.x >= 0 ? 1 : -1;
     }
 
     private void Update()
@@ -44,8 +48,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private void PatrolMovement()
     {
-        if (anim != null)
-            anim.SetBool("walk", true);
+        anim?.SetBool("walk", true);
 
         float leftX = Mathf.Min(leftPoint.position.x, rightPoint.position.x);
         float rightX = Mathf.Max(leftPoint.position.x, rightPoint.position.x);
@@ -71,8 +74,7 @@ public class EnemyPatrol : MonoBehaviour
         isIdle = true;
         rb.linearVelocity = Vector2.zero;
 
-        if (anim != null)
-            anim.SetBool("walk", false);
+        anim?.SetBool("walk", false);
 
         yield return new WaitForSeconds(idleTime);
 
@@ -82,7 +84,7 @@ public class EnemyPatrol : MonoBehaviour
         isIdle = false;
     }
 
-    private void Flip(int dir)
+    public void Flip(int dir)
     {
         if (model != null)
         {
@@ -94,12 +96,42 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
+    // -----------------------------
+    // ⭐ Khi player rời zone → quay về hướng ban đầu
+    // -----------------------------
+    public void FaceDefaultDirection()
+    {
+        Flip(defaultDirection);
+    }
+
+    // -----------------------------
+    // ⭐ Khi patrol hoạt động lại → quay về hướng patrol
+    // -----------------------------
+    public void FacePatrolDirection()
+    {
+        Flip(movingRight ? 1 : -1);
+    }
+
     public void StopMoving()
     {
         canMove = false;
         rb.linearVelocity = Vector2.zero;
+        anim?.SetBool("walk", false);
+    }
 
-        if (anim != null)
-            anim.SetBool("walk", false);
+    public void ResumePatrol()
+    {
+        canMove = true;
+        isIdle = false;
+        anim?.SetBool("walk", true);
+
+        FacePatrolDirection();
+    }
+
+    public void StopPatrol()
+    {
+        canMove = false;
+        rb.linearVelocity = Vector2.zero;
+        anim?.SetBool("walk", false);
     }
 }
