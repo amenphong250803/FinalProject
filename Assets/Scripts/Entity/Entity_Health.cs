@@ -116,6 +116,14 @@ public class Entity_Health : MonoBehaviour
         }
     }
 
+    public float GetCurrentHp() => currentHp;
+
+    public float GetMaxHealth()
+    {
+        return stats != null ? stats.GetMaxHealth() : currentHp;
+    }
+
+
     protected virtual void Die()
     {
         isDead = true;
@@ -129,7 +137,13 @@ public class Entity_Health : MonoBehaviour
 
     private void UpdatehealthBar()
     {
-        healthBar.value = currentHp / stats.GetMaxHealth();
+        if (healthBar == null || stats == null)
+            return;
+
+        float maxHp = stats.GetMaxHealth();
+        if (maxHp <= 0) maxHp = 1;
+
+        healthBar.value = currentHp / maxHp;
     }
 
     public bool IsDead => isDead;
