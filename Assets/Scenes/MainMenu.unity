@@ -1616,7 +1616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a7d0fc9e5c82946a779e363d7df02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: SampleScene
+  gameSceneName: Map1
   continueButton: {fileID: 617207305}
 --- !u!1 &1045517581
 GameObject:

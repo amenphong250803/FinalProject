@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [Header("Scenes")]
-    public string gameSceneName = "SampleScene";  // tên scene game của bạn
+    public string gameSceneName = "Map1";  // tên scene game của bạn
 
     [Header("UI")]
     public Button continueButton;
