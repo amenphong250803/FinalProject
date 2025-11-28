@@ -23,6 +23,10 @@ public class HealthPotion : MonoBehaviour
                 );
             }
 
+            SavedPickup saved = GetComponent<SavedPickup>();
+            if (saved != null)
+                saved.MarkCollected();
+
             Destroy(gameObject);
         }
     }
