@@ -24,6 +24,10 @@ public class Hp_Pernament : MonoBehaviour
                 );
             }
 
+            SavedPickup saved = GetComponent<SavedPickup>();
+            if (saved != null)
+                saved.MarkCollected();
+
             Destroy(gameObject);
         }
     }
