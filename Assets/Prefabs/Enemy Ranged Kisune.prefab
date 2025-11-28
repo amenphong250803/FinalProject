@@ -376,7 +376,7 @@ MonoBehaviour:
   maxHp:
     baseValue: 100
   damage:
-    baseValue: 4
+    baseValue: 25
 --- !u!114 &2749040184001682732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,7 +1165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1539741690403297250, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.17
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 1539741690403297250, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1194,6 +1194,10 @@ PrefabInstance:
     - target: {fileID: 2652078054319560265, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012318868345612752, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4340053833739327857, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_Layer

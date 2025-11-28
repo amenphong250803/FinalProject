@@ -480,9 +480,9 @@ MonoBehaviour:
     vitality:
       baseValue: 0
   maxHp:
-    baseValue: 300
+    baseValue: 150
   damage:
-    baseValue: 30
+    baseValue: 15
 --- !u!114 &3347250820588924016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,11 +625,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1539741690403297250, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.03
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1539741690403297250, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.87
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1539741690403297250, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -646,6 +646,10 @@ PrefabInstance:
     - target: {fileID: 2314500383816885451, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_Name
       value: HealthBar_UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012318868345612752, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5067647544339161792, guid: 31c15c68baff3fa4bb8b1bcb4e06fa0e, type: 3}
       propertyPath: m_AnchorMax.x
