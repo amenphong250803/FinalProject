@@ -193,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 1040062877318159168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.58, y: -4.99, z: 0.050328255}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 0.54999995, y: 0.54999995, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -348,8 +348,8 @@ Transform:
   m_GameObject: {fileID: 3206416542332713499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.72, y: -3.7, z: 0.050328255}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2233226847178753170}
@@ -443,7 +443,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.062240332, y: -1.6745002}
+  m_Offset: {x: -0.3563323, y: -2.1721556}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -453,7 +453,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.9931116, y: 6.746571}
+  m_Size: {x: 2.8911128, y: 7.741882}
   m_EdgeRadius: 0
 --- !u!50 &5407845559946181725
 Rigidbody2D:
@@ -500,6 +500,8 @@ MonoBehaviour:
   - {fileID: 818604845406126992}
   shootPoint: {fileID: 6350528545376171683}
   cooldown: 3
+  shootSFX: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &3369827692696975615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,7 +554,7 @@ Transform:
   m_GameObject: {fileID: 5035277259128337652}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.969016, y: -4.6522946, z: 0.050328255}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
   m_LocalScale: {x: 0.54999995, y: 0.54999995, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -586,7 +588,7 @@ Transform:
   m_GameObject: {fileID: 5627881006637206281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 1.11, z: 0.0005795956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -690,6 +692,8 @@ MonoBehaviour:
   - {fileID: 818604845406126992}
   shootPoint: {fileID: 6350528545376171683}
   cooldown: 3
+  shootSFX: {fileID: 8300000, guid: 2d78e3db5b20a2a4986423580277fffd, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &6966914668591047838
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@
 public class BossRangedAttack : MonoBehaviour
 {
     [Header("Bullet Pool (Manual)")]
-    public GameObject[] bullets;    // Bạn tự kéo bullet vào đây
+    public GameObject[] bullets;
 
     [Header("Shoot Settings")]
     public Transform shootPoint;
@@ -12,7 +12,11 @@ public class BossRangedAttack : MonoBehaviour
     private float nextShootTime = 0f;
 
     private BossTargetDetection detect;
-    private BossAttackZone zone; // Zone mới
+    private BossAttackZone zone;
+
+    [Header("Audio")]
+    public AudioSource audioSource;    // ⭐ GẮN AudioSource
+    public AudioClip shootSFX;         // ⭐ Âm thanh bắn đạn
 
     void Awake()
     {
@@ -20,7 +24,7 @@ public class BossRangedAttack : MonoBehaviour
         zone = GetComponentInParent<BossAttackZone>();
     }
 
-    // Gọi bằng Animation Event: Shoot()
+    // Gọi bằng Animation Event
     public void Shoot()
     {
         // Cooldown
@@ -29,17 +33,17 @@ public class BossRangedAttack : MonoBehaviour
         // Phải nhìn thấy player
         if (!detect.HasTarget) return;
 
-        // 🔥 Quan trọng: phải trong DONUT ZONE mới bắn được
+        // Phải ở trong vùng DONUT ZONE
         if (!zone.playerInRangedZone) return;
 
         Transform player = detect.player;
         if (player == null) return;
 
-        // Lấy bullet rảnh
+        // Lấy bullet còn trống
         GameObject bullet = GetFreeBullet();
         if (bullet == null) return;
 
-        // Đặt vị trí bắn
+        // Đặt vị trí bullet
         bullet.transform.position = shootPoint.position;
 
         // Kích hoạt bullet
@@ -49,11 +53,13 @@ public class BossRangedAttack : MonoBehaviour
         Vector2 dir = (player.position - shootPoint.position).normalized;
         bullet.GetComponent<BossProjectile>().SetDirection(dir);
 
-        // Reset cooldown
+        // 🔊 PLAY SFX
+        PlayShootSFX();
+
+        // Reset timer
         nextShootTime = Time.time + cooldown;
     }
 
-    // Tìm bullet chưa active
     private GameObject GetFreeBullet()
     {
         foreach (GameObject b in bullets)
@@ -61,6 +67,17 @@ public class BossRangedAttack : MonoBehaviour
             if (!b.activeInHierarchy)
                 return b;
         }
-        return null; // hết đạn
+        return null;
+    }
+
+    // ===========================
+    //        🔊 SFX BẮN
+    // ===========================
+    private void PlayShootSFX()
+    {
+        if (audioSource == null || shootSFX == null)
+            return;
+
+        audioSource.PlayOneShot(shootSFX);
     }
 }

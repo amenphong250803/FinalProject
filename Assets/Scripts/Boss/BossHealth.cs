@@ -7,10 +7,25 @@ public class BossHealth : Entity_Health
 
     private Animator anim;
 
+    [Header("Music")]
+    public BossTargetDetection detectMusic;
+
+    [Header("SFX")]
+    public AudioSource audioSource;     // ⭐ Gắn AudioSource của boss
+    public AudioClip deathSFX;          // ⭐ Âm thanh boss chết
+
+    private bool deathSoundPlayed = false;  // ⭐ Ngăn chơi lại SFX
+
     protected override void Awake()
     {
         base.Awake();
         anim = GetComponentInChildren<Animator>();
+
+        // Nếu bạn quên gán AudioSource → thử tìm trong con
+        if (audioSource == null)
+        {
+            audioSource = GetComponentInChildren<AudioSource>();
+        }
     }
 
     public override void TakeDamage(float damage)
@@ -25,32 +40,51 @@ public class BossHealth : Entity_Health
     {
         base.Die();
         anim.SetTrigger("dead");
+
+        PlayDeathSFX();   // 🔊 CHƠI ÂM THANH BOSS CHẾT
+
+        if (detectMusic != null)
+        {
+            detectMusic.OnBossDead();
+        }
+        else
+        {
+            Debug.LogWarning("BossHealth: detectMusic chưa được gán trong Inspector!");
+        }
     }
+
+    // =============================
+    //        🔊 SFX DEATH
+    // =============================
+    private void PlayDeathSFX()
+    {
+        if (deathSoundPlayed) return;       // tránh lặp
+        if (audioSource == null || deathSFX == null) return;
+
+        audioSource.PlayOneShot(deathSFX);
+        deathSoundPlayed = true;
+    }
+
+    // =============================
+    //  HP BAR FUNCTIONS (giữ nguyên)
+    // =============================
 
     public void SetImmune(bool value)
     {
         isImmune = value;
     }
 
-    /// <summary>
-    /// Lấy phần trăm HP dựa trên currentHp / maxHp trong healthBar
-    /// </summary>
     public float GetHpPercent()
     {
         if (currentHp <= 0) return 0f;
 
-        // ✔ Lấy maxHp bằng cách đọc từ Slider (đã có sẵn trong Entity_Health)
         var bar = GetComponentInChildren<UnityEngine.UI.Slider>();
         if (bar == null || bar.maxValue == 0f) return 0f;
 
-        // bar.value = currentHp/maxHp → maxHp = currentHp/bar.value
         float calculatedMaxHp = currentHp / bar.value;
         return currentHp / calculatedMaxHp;
     }
 
-    /// <summary>
-    /// Heal boss theo phần trăm hp tối đa
-    /// </summary>
     public void HealPercent(float percent)
     {
         var bar = GetComponentInChildren<UnityEngine.UI.Slider>();
@@ -66,9 +100,6 @@ public class BossHealth : Entity_Health
         UpdateBar();
     }
 
-    /// <summary>
-    /// Cập nhật thanh máu giống Entity_Health
-    /// </summary>
     private void UpdateBar()
     {
         var bar = GetComponentInChildren<UnityEngine.UI.Slider>();
