@@ -1,39 +1,70 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class ParallaxLayer
 {
     [SerializeField] private Transform background;
-    [SerializeField] private float parallaxMultiplierX;
-    [SerializeField] private float parallaxMultiplierY;
+    [SerializeField] private float parallaxMultiplierX = 0.5f;
+    [SerializeField] private float parallaxMultiplierY = 0.2f;
+
+    [Header("Loop settings")]
+    [SerializeField] private bool loopX = true;
+    [SerializeField] private bool loopY = false;   // map sâu, để false
+
+    [Header("Offset")]
     [SerializeField] private float imageWidthOffset = 10;
+    [SerializeField] private float imageHeightOffset = 10;
 
     private float imageFullWidth;
     private float imageHalfWidth;
 
+    private float imageFullHeight;
+    private float imageHalfHeight;
+
     public void CalculateImageWidth()
     {
-        imageFullWidth = background.GetComponent<SpriteRenderer>().bounds.size.x;
+        var spriteRenderer = background.GetComponent<SpriteRenderer>();
+
+        imageFullWidth = spriteRenderer.bounds.size.x;
         imageHalfWidth = imageFullWidth / 2;
+
+        imageFullHeight = spriteRenderer.bounds.size.y;
+        imageHalfHeight = imageFullHeight / 2;
     }
 
     public void Move(float distanceToMoveX, float distanceToMoveY)
     {
-        background.position = background.position + new Vector3(distanceToMoveX * parallaxMultiplierX, distanceToMoveY * parallaxMultiplierY );
+        background.position += new Vector3(
+            distanceToMoveX * parallaxMultiplierX,
+            distanceToMoveY * parallaxMultiplierY
+        );
     }
 
-    public void LookBackground(float cameraLeftEdge, float cameraRightEdge)
+    public void LookBackground(float cameraLeftEdge, float cameraRightEdge,
+                               float cameraBottomEdge, float cameraTopEdge)
     {
-        float imageRightEdge = (background.position.x + imageHalfWidth) - imageWidthOffset;
-        float imageLeftEdge = (background.position.x - imageHalfWidth) + imageWidthOffset;
+        // ----- Loop ngang -----
+        if (loopX)
+        {
+            float imageRightEdge = (background.position.x + imageHalfWidth) - imageWidthOffset;
+            float imageLeftEdge = (background.position.x - imageHalfWidth) + imageWidthOffset;
 
-        if(imageRightEdge < cameraLeftEdge)
+            if (imageRightEdge < cameraLeftEdge)
+                background.position += Vector3.right * imageFullWidth;
+            else if (imageLeftEdge > cameraRightEdge)
+                background.position -= Vector3.right * imageFullWidth;
+        }
+
+        // ----- Loop dọc (tắt cho map hiện tại) -----
+        if (loopY)
         {
-            background.position = background.position + (Vector3.right * imageFullWidth);
-        } 
-        else if(imageLeftEdge > cameraRightEdge)
-        {
-            background.position = background.position + (Vector3.right * -imageFullWidth);
+            float imageTopEdge = (background.position.y + imageHalfHeight) - imageHeightOffset;
+            float imageBottomEdge = (background.position.y - imageHalfHeight) + imageHeightOffset;
+
+            if (imageTopEdge < cameraBottomEdge)
+                background.position += Vector3.up * imageFullHeight;
+            else if (imageBottomEdge > cameraTopEdge)
+                background.position -= Vector3.up * imageFullHeight;
         }
     }
 }
