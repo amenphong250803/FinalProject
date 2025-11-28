@@ -366,10 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de09ae6f1cc17343b07a4fcd7ea5e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHp: 300
+  currentHp: 450
   isDead: 0
   isImmune: 0
-  damageMultiplier: 1
+  damageMultiplier: 5
   detectMusic: {fileID: 1161598365777492367}
   audioSource: {fileID: 6488243841059929644}
   deathSFX: {fileID: 8300000, guid: 551d4506f5704ec4ab6748766c8e7fc0, type: 3}
