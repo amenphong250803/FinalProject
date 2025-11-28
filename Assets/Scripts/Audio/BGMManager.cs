@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class BGMManager : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class BGMManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton để đảm bảo chỉ có 1 BGM chạy trong toàn bộ game
         if (Instance == null)
         {
             Instance = this;
@@ -21,26 +21,57 @@ public class BGMManager : MonoBehaviour
         }
     }
 
-    // Phát nhạc nền
+    // Phát nhạc bình thường
     public void PlayBGM(AudioClip clip, float volume = 1f)
     {
-        if (bgmSource == null)
-            bgmSource = GetComponent<AudioSource>();
-
-        bgmSource.volume = volume;
-
-        // Nếu đang phát đúng bài rồi thì không restart
-        if (bgmSource.clip == clip && bgmSource.isPlaying)
-            return;
+        if (clip == null) return;
 
         bgmSource.clip = clip;
+        bgmSource.volume = volume;
         bgmSource.loop = true;
         bgmSource.Play();
     }
 
-    // Dừng nhạc nền
+    // Dừng nhạc
     public void StopBGM()
     {
         bgmSource.Stop();
+    }
+
+    // ⭐ HÀM QUAN TRỌNG: Fade sang nhạc mới
+    public void FadeTo(AudioClip newClip, float duration = 1f)
+    {
+        if (newClip == null)
+        {
+            Debug.LogWarning("FadeTo gọi nhạc Null!");
+            return;
+        }
+
+        StartCoroutine(FadeBGM(newClip, duration));
+    }
+
+    private IEnumerator FadeBGM(AudioClip newClip, float duration)
+    {
+        float startVolume = bgmSource.volume;
+
+        // FADE OUT
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            bgmSource.volume = Mathf.Lerp(startVolume, 0f, t / duration);
+            yield return null;
+        }
+
+        bgmSource.volume = 0f;
+        bgmSource.clip = newClip;
+        bgmSource.Play();
+
+        // FADE IN
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            bgmSource.volume = Mathf.Lerp(0f, startVolume, t / duration);
+            yield return null;
+        }
+
+        bgmSource.volume = startVolume;
     }
 }

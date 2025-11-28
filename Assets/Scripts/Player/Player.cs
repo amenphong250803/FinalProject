@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -16,13 +16,11 @@ public class Player : Entity
 
     public Player_DeadState deadState { get; private set; }
 
-
     [Header("Attack details")]
     public Vector2[] attackVelocity;
     public float attackVelocityDuration = .1f;
     public float comboResetTime = 1;
     private Coroutine queuedAttackCo;
-
 
     [Header("Movement details")]
     public float moveSpeed;
@@ -32,10 +30,19 @@ public class Player : Entity
     public float dashSpeed = 20;
 
     [Header("Jump Settings")]
-    public int maxJumps = 2;   
+    public int maxJumps = 2;
     [HideInInspector] public int jumpCount = 0;
 
     public Vector2 moveInput { get; private set; }
+
+
+    [Header("Audio Settings")]
+    public AudioSource audioSource;   
+
+    public AudioClip jumpSFX;         // nhảy
+    public AudioClip dashSFX;         // dash
+    public AudioClip footstepSFX;     // chạy / đi bộ
+    public AudioClip deathSFX;        // chết
 
     protected override void Awake()
     {
@@ -48,9 +55,14 @@ public class Player : Entity
 
         jumpState = new Player_JumpState(this, stateMachine, "jumpFall");
         fallState = new Player_FallState(this, stateMachine, "jumpFall");
+
         basicAttackState = new Player_BasicAttackState(this, stateMachine, "basicAttack");
         deadState = new Player_DeadState(this, stateMachine, "dead");
+
         dashState = new Player_DashState(this, stateMachine, "dash");
+
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
     }
 
     protected override void Start()
@@ -59,18 +71,39 @@ public class Player : Entity
         stateMachine.Initialize(idleState);
     }
 
+    public void PlayJumpSFX()
+    {
+        if (jumpSFX) audioSource.PlayOneShot(jumpSFX);
+    }
+
+    public void PlayDashSFX()
+    {
+        if (dashSFX) audioSource.PlayOneShot(dashSFX);
+    }
+
+    public void PlayFootstepSFX()
+    {
+        if (footstepSFX) audioSource.PlayOneShot(footstepSFX);
+    }
+
+    public void PlayDeathSFX()
+    {
+        if (deathSFX) audioSource.PlayOneShot(deathSFX);
+    }
+
     public override void EntityDeath()
     {
         base.EntityDeath();
+
+        PlayDeathSFX();
+
         stateMachine.ChangeState(deadState);
     }
 
     public void EnterAttackStateWithDelay()
     {
         if (queuedAttackCo != null)
-        {
             StopCoroutine(queuedAttackCo);
-        }
 
         queuedAttackCo = StartCoroutine(EnterAttackStateWithDelayCo());
     }
@@ -80,7 +113,6 @@ public class Player : Entity
         yield return new WaitForEndOfFrame();
         stateMachine.ChangeState(basicAttackState);
     }
-
 
     private void OnEnable()
     {

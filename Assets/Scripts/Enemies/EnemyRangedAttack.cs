@@ -9,6 +9,10 @@ public class EnemyRangedAttack : MonoBehaviour
     public Transform shootPoint;
     public float cooldown = 3f;
 
+    [Header("Shoot Sound")]
+    public AudioClip shootSFX;
+    public AudioSource audioSource;
+
     private float nextShootTime;
 
     private EnemyTargetDetection detect;
@@ -17,28 +21,22 @@ public class EnemyRangedAttack : MonoBehaviour
     private Animator anim;
     private EnemyHealth hp;
 
-    // để tránh reset patrol liên tục
     private bool wasInZone = false;
 
     void Awake()
     {
         detect = GetComponentInParent<EnemyTargetDetection>();
         zone = GetComponentInChildren<EnemyRangedZone>();
-
-        // ⭐ EnemyRangedAttack luôn nằm trong child → phải lấy patrol ở cha
         patrol = GetComponentInParent<EnemyPatrol>();
-
         anim = GetComponentInChildren<Animator>();
-
-        // ⭐ Health cũng nằm ở cha
         hp = GetComponentInParent<EnemyHealth>();
+
+        if (audioSource == null)
+            audioSource = GetComponentInParent<AudioSource>();
     }
 
     void Update()
     {
-        // =============================================================
-        // ⭐ 1. NGĂN MỌI HÀNH ĐỘNG SAU KHI CHẾT
-        // =============================================================
         if (hp != null && hp.IsDead)
         {
             anim.ResetTrigger("attack");
@@ -47,9 +45,7 @@ public class EnemyRangedAttack : MonoBehaviour
 
         if (!detect || !zone) return;
 
-        // =============================================================
-        // ⭐ 2. PLAYER KHÔNG Ở TRONG ZONE → TRỞ LẠI PATROL (CHỈ 1 LẦN)
-        // =============================================================
+        // ❌ PLAYER RỜI ZONE → trở lại patrol
         if (!zone.playerInRangedZone)
         {
             if (wasInZone)
@@ -60,26 +56,29 @@ public class EnemyRangedAttack : MonoBehaviour
             return;
         }
 
-        // từ đây trở đi nghĩa là Player đang trong zone
+        // ✔ PLAYER TRONG ZONE
         wasInZone = true;
 
-        // =============================================================
-        // ⭐ 3. QUAY MẶT THEO PLAYER (flip model)
-        // =============================================================
+        // ⭐ 1. DỪNG DI CHUYỂN NGAY LẬP TỨC
+        if (patrol != null)
+            patrol.StopPatrol();
+
+        // ⭐ 2. QUAY VỀ HƯỚNG PLAYER
         FlipTowardPlayer();
 
-        // =============================================================
-        // ⭐ 4. BẮN ĐẠN NẾU ĐƯỢC PHÉP
-        // =============================================================
         if (!detect.HasTarget) return;
         if (Time.time < nextShootTime) return;
 
+        // ⭐ 3. BẮN ĐẠN
         anim.SetTrigger("attack");
+        anim.SetBool("attack", true);
+
+        // đứng im trong lúc bắn → patrol đã stop
         nextShootTime = Time.time + cooldown;
     }
 
     // =====================================================================
-    // ⭐ HÀM: Player ra khỏi zone → enemy quay về patrol & hướng ban đầu
+    // ⭐ PLAYER RỜI ZONE → quay về patrol bình thường
     // =====================================================================
     private void StopAttackAndResumePatrol()
     {
@@ -87,13 +86,11 @@ public class EnemyRangedAttack : MonoBehaviour
         anim.SetBool("attack", false);
 
         if (patrol != null)
-        {
-            patrol.ResumePatrol();        // tiếp tục đi tuần
-        }
+            patrol.ResumePatrol();
     }
 
     // =====================================================================
-    // ⭐ HÀM: Quay enemy theo hướng player
+    // ⭐ QUAY HƯỚNG THEO PLAYER
     // =====================================================================
     private void FlipTowardPlayer()
     {
@@ -107,12 +104,18 @@ public class EnemyRangedAttack : MonoBehaviour
     }
 
     // =====================================================================
-    // ⭐ Enemy animation dùng event Shoot()
+    // ⭐ Animation Event gọi hàm này để bắn đạn
     // =====================================================================
     public void Shoot()
     {
+        // NGĂN BẮN KHI PLAYER RA KHỎI ZONE
+        if (!zone.playerInRangedZone) return;
+
         if (!detect.HasTarget) return;
         if (hp != null && hp.IsDead) return;
+
+        if (shootSFX != null && audioSource != null)
+            audioSource.PlayOneShot(shootSFX);
 
         Transform player = detect.player;
         if (player == null) return;
@@ -129,6 +132,7 @@ public class EnemyRangedAttack : MonoBehaviour
         if (proj != null)
             proj.SetDirection(dir);
     }
+
 
     private GameObject GetFreeBullet()
     {
