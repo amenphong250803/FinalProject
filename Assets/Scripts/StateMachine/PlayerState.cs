@@ -23,7 +23,7 @@ public abstract class PlayerState : EntityState
     {
         base.Update();
 
-        if (input.Player.Dash.WasPressedThisFrame() && stateMachine.currentState != player.dashState)
+        if (input.Player.Dash.WasPressedThisFrame() && Time.time >= player.lastDashTime + player.dashCooldown && stateMachine.currentState != player.dashState)
         {
             stateMachine.ChangeState(player.dashState);
         }

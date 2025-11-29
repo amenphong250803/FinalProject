@@ -33,6 +33,11 @@ public class Player : Entity
     public int maxJumps = 2;
     [HideInInspector] public int jumpCount = 0;
 
+    [Header("Dash Cooldown")]
+    public float dashCooldown = 1.5f;
+    [HideInInspector] public float lastDashTime = -999f;
+
+
     public Vector2 moveInput { get; private set; }
 
 
