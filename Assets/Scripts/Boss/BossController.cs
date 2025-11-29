@@ -106,7 +106,7 @@ public class BossController : MonoBehaviour
 
         if (lazerUnlocked && lazerTimer <= 0f)
         {
-            anim.SetTrigger("lazer");
+            anim.SetTrigger("laser");
             lazerTimer = 15f;
             return;
         }
