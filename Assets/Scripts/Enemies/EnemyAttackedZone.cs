@@ -3,7 +3,7 @@
 public class EnemyAttackedZone : MonoBehaviour
 {
     [Header("State")]
-    public bool playerInAttackZone;   // EnemyAttack sẽ đọc biến này
+    public bool playerInAttackZone;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

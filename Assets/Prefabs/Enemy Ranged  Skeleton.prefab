@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 6744642792407538365}
   - component: {fileID: 3823302737413384203}
   - component: {fileID: 3422922326441874055}
+  - component: {fileID: 1208547104822278498}
   m_Layer: 7
   m_Name: Enemy Ranged
   m_TagString: Enemy
@@ -493,7 +494,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7070663, y: -2.8121872}
+  m_Offset: {x: -0.51667345, y: -3.0144796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -503,8 +504,21 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4141326, y: 6.6243734}
+  m_Size: {x: 2.0333462, y: 5.981797}
   m_EdgeRadius: 0
+--- !u!114 &1208547104822278498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3803740326200142328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c1dc3bdb6e23a43b64ff776ef946db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killValue: 1
 --- !u!1 &5054654553106681347
 GameObject:
   m_ObjectHideFlags: 0

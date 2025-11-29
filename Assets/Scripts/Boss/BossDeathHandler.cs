@@ -18,11 +18,6 @@ public class BossDeathHandler : MonoBehaviour
 
         if (anim == null)
             anim = GetComponent<Animator>();
-
-        if (health == null)
-            Debug.LogError("BossDeathHandler: KHÔNG tìm thấy Entity_Health trên Boss!");
-        if (victoryUI == null)
-            Debug.LogError("BossDeathHandler: CHƯA gán VictoryUI!");
     }
 
     private void Update()

@@ -3,15 +3,18 @@
 [RequireComponent(typeof(Entity_Health))]
 [RequireComponent(typeof(Entity_Stats))]
 [RequireComponent(typeof(PlayerPotionHandler))]
+[RequireComponent(typeof(PlayerProgression))]
 public class PlayerSaveController : MonoBehaviour
 {
     private Entity_Health health;
     private Entity_Stats stats;
     private PlayerPotionHandler potionHandler;
     private PlayerPermanentHpHandler permanentHandler;
+    private PlayerProgression progression;
 
     [Header("Save Settings")]
     [SerializeField] private bool autoLoadOnStart = true;
+    public static bool LoadFromSave = false;
 
     private void Awake()
     {
@@ -19,19 +22,17 @@ public class PlayerSaveController : MonoBehaviour
         stats = GetComponent<Entity_Stats>();
         potionHandler = GetComponent<PlayerPotionHandler>();
         permanentHandler = GetComponent<PlayerPermanentHpHandler>();
+        progression = GetComponent<PlayerProgression>();
     }
 
     private void Start()
     {
-        if (autoLoadOnStart && PlayerPrefs.HasKey("Player_HP"))
-        {
+        if (LoadFromSave && PlayerPrefs.HasKey("Player_HP"))
             LoadGame();
-        }
     }
 
     private void Update()
     {
-        // vẫn giữ để test cho dễ
         if (Input.GetKeyDown(KeyCode.K))
             SaveGame();
 
@@ -41,10 +42,15 @@ public class PlayerSaveController : MonoBehaviour
 
     public void SaveGame()
     {
-        Debug.Log("Đang chạy SaveGame()");
-
         PlayerPrefs.SetFloat("Player_HP", health.GetCurrentHp());
         PlayerPrefs.SetFloat("Player_VIT", stats.GetVitalityTotal());
+        PlayerPrefs.SetFloat("Player_STR", stats.GetStrengthTotal());
+
+        if (progression != null)
+        {
+            PlayerPrefs.SetInt("Player_Level", progression.currentLevel);
+            PlayerPrefs.SetInt("Player_Exp", progression.currentExp);
+        }
 
         PlayerPrefs.SetInt("Player_Potions", potionHandler.currentPotions);
 
@@ -57,27 +63,30 @@ public class PlayerSaveController : MonoBehaviour
         PlayerPrefs.SetFloat("Player_PosZ", pos.z);
 
         PlayerPrefs.SetInt("HasSave", 1);
-
         PlayerPrefs.Save();
-        Debug.Log("💾 Game saved (PlayerPrefs).");
     }
 
     public void LoadGame()
     {
-        Debug.Log("Đang chạy LoadGame()");
-
         if (!PlayerPrefs.HasKey("Player_HP"))
-        {
-            Debug.Log("⚠ Chưa có save để load.");
             return;
-        }
 
         float savedVit = PlayerPrefs.GetFloat("Player_VIT", stats.GetVitalityTotal());
         stats.SetVitalityFromSave(savedVit);
 
+        float savedStr = PlayerPrefs.GetFloat("Player_STR", stats.GetStrengthTotal());
+        stats.SetStrengthFromSave(savedStr);
+
         health.RecalculateMaxHealth(false);
         float savedHp = PlayerPrefs.GetFloat("Player_HP", health.GetCurrentHp());
         health.SetCurrentHp(savedHp);
+
+        if (progression != null)
+        {
+            int savedLevel = PlayerPrefs.GetInt("Player_Level", progression.currentLevel);
+            int savedExp = PlayerPrefs.GetInt("Player_Exp", 0);
+            progression.LoadFromSave(savedLevel, savedExp);
+        }
 
         potionHandler.currentPotions = PlayerPrefs.GetInt("Player_Potions", 0);
         potionHandler.UpdatePotionUI();
@@ -92,11 +101,8 @@ public class PlayerSaveController : MonoBehaviour
         float y = PlayerPrefs.GetFloat("Player_PosY", transform.position.y);
         float z = PlayerPrefs.GetFloat("Player_PosZ", transform.position.z);
         transform.position = new Vector3(x, y, z);
-
-        Debug.Log("📥 Game loaded (PlayerPrefs).");
     }
 
-    // dùng cho UI Button
     public void SaveGameButton() => SaveGame();
     public void LoadGameButton() => LoadGame();
 }

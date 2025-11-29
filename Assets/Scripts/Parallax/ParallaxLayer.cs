@@ -9,7 +9,7 @@ public class ParallaxLayer
 
     [Header("Loop settings")]
     [SerializeField] private bool loopX = true;
-    [SerializeField] private bool loopY = false;   // map sâu, để false
+    [SerializeField] private bool loopY = false;
 
     [Header("Offset")]
     [SerializeField] private float imageWidthOffset = 10;
@@ -43,7 +43,6 @@ public class ParallaxLayer
     public void LookBackground(float cameraLeftEdge, float cameraRightEdge,
                                float cameraBottomEdge, float cameraTopEdge)
     {
-        // ----- Loop ngang -----
         if (loopX)
         {
             float imageRightEdge = (background.position.x + imageHalfWidth) - imageWidthOffset;
@@ -55,7 +54,6 @@ public class ParallaxLayer
                 background.position -= Vector3.right * imageFullWidth;
         }
 
-        // ----- Loop dọc (tắt cho map hiện tại) -----
         if (loopY)
         {
             float imageTopEdge = (background.position.y + imageHalfHeight) - imageHeightOffset;

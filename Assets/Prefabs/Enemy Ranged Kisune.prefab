@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 2412402702636066080}
   - component: {fileID: 3369827692696975615}
   - component: {fileID: 4967062372474931441}
+  - component: {fileID: 1321419419940871700}
   m_Layer: 7
   m_Name: Enemy Ranged
   m_TagString: Enemy
@@ -529,6 +530,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRangedZone: 0
+--- !u!114 &1321419419940871700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206416542332713499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c1dc3bdb6e23a43b64ff776ef946db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killValue: 1
 --- !u!1 &5035277259128337652
 GameObject:
   m_ObjectHideFlags: 0

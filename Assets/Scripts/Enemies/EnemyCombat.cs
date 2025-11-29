@@ -18,8 +18,8 @@ public class EnemyCombat : MonoBehaviour
     public LayerMask targetMask;
 
     [Header("SFX")]
-    public AudioSource audioSource;        // Nơi phát âm thanh (gắn vào Model hoặc Enemy)        
-    public AudioClip hitSFX;               // Âm thanh khi đánh trúng Player
+    public AudioSource audioSource;    
+    public AudioClip hitSFX;
 
     private Transform target;
     private Entity_Stats stats;
@@ -47,21 +47,18 @@ public class EnemyCombat : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, target.position);
 
-        // 1) Bắt đầu chase
         if (!isChasing && distance <= chaseRange)
             StartChasing();
 
-        // 2) Nếu đang chase
         if (isChasing)
         {
-            // Player chạy quá xa → quay về patrol
+ 
             if (distance >= stopChaseRange)
             {
                 StopChasing();
                 return;
             }
 
-            // Nếu chưa vào tầm attack → đuổi theo
             if (distance > attackRadius + 0.2f)
             {
                 MoveTowardPlayer();
@@ -73,19 +70,13 @@ public class EnemyCombat : MonoBehaviour
         }
     }
 
-    // ======================================================
-    // ⭐ BẮT ĐẦU CHASE
-    // ======================================================
     private void StartChasing()
     {
         isChasing = true;
-        patrol.StopPatrol();              // Tắt patrol đúng chuẩn của bạn
+        patrol.StopPatrol();
         anim?.SetBool("walk", true);
     }
 
-    // ======================================================
-    // ⭐ NGỪNG CHASE – QUAY LẠI PATROL
-    // ======================================================
     private void StopChasing()
     {
         isChasing = false;
@@ -93,30 +84,22 @@ public class EnemyCombat : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         anim?.SetBool("walk", false);
 
-        patrol.ResumePatrol();            // Tiếp tục patrol theo đúng hướng ban đầu
-        patrol.FacePatrolDirection();     // Quay về hướng patrol
+        patrol.ResumePatrol();
+        patrol.FacePatrolDirection();
 
-        Debug.Log($"{name} quay lại patrol");
     }
 
-    // ======================================================
-    // ⭐ DÍ THEO PLAYER (không phá logic EnemyPatrol)
-    // ======================================================
     private void MoveTowardPlayer()
     {
         Vector2 dir = (target.position - transform.position).normalized;
 
         rb.linearVelocity = new Vector2(dir.x * chaseSpeed, rb.linearVelocity.y);
 
-        // flip model
         patrol.Flip(dir.x > 0 ? 1 : -1);
 
         anim?.SetBool("walk", true);
     }
 
-    // ======================================================
-    // ⭐ GỌI Animation Attack
-    // ======================================================
     private void TryAttack()
     {
         rb.linearVelocity = Vector2.zero;
@@ -128,9 +111,6 @@ public class EnemyCombat : MonoBehaviour
         }
     }
 
-    // ======================================================
-    // ⭐ DAMAGE – gọi bởi Animation Event
-    // ======================================================
     public void PerformAttack()
     {
         float finalDamage = stats != null ? stats.GetDamage() : damage;
@@ -150,12 +130,9 @@ public class EnemyCombat : MonoBehaviour
             {
                 hp.TakeDamage(finalDamage);
                 hitSomeone = true;
-
-                Debug.Log($"{name} đánh {t.name} gây {finalDamage} damage");
             }
         }
 
-        // ⭐ SFX: âm đánh trúng
         if (hitSomeone && audioSource != null && hitSFX != null)
             audioSource.PlayOneShot(hitSFX);
     }

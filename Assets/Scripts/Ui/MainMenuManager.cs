@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [Header("Scenes")]
-    public string gameSceneName = "Map1"; 
+    public string gameSceneName = "Map1";
 
     [Header("UI")]
     public Button continueButton;
@@ -13,6 +13,7 @@ public class MainMenuManager : MonoBehaviour
     private void Start()
     {
         bool hasSave = PlayerPrefs.GetInt("HasSave", 0) == 1;
+
         if (continueButton != null)
             continueButton.interactable = hasSave;
     }
@@ -20,18 +21,16 @@ public class MainMenuManager : MonoBehaviour
     public void OnStartGame()
     {
         PlayerPrefs.DeleteAll();
-
+        PlayerSaveController.LoadFromSave = false;
         SceneManager.LoadScene(gameSceneName);
     }
 
     public void OnContinue()
     {
         if (PlayerPrefs.GetInt("HasSave", 0) != 1)
-        {
-            Debug.Log("❌ Không có save để Continue");
             return;
-        }
 
+        PlayerSaveController.LoadFromSave = true;
         SceneManager.LoadScene(gameSceneName);
     }
 

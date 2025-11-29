@@ -10,13 +10,13 @@ public class BossTargetDetection : MonoBehaviour
     public float triggerDistance = 12f;
 
     private bool bossMusicPlaying = false;
-    public bool bossIsDead = false;   // ⭐ FIX QUAN TRỌNG
+    public bool bossIsDead = false;
 
     public bool HasTarget => player != null;
 
     void Update()
     {
-        if (bossIsDead) return;   // ⭐ Boss chết -> KHÔNG BẬT NHẠC BOSS
+        if (bossIsDead) return;
 
         if (player == null)
         {
@@ -40,7 +40,6 @@ public class BossTargetDetection : MonoBehaviour
         }
     }
 
-    // ⭐ HÀM QUAN TRỌNG
     public void OnBossDead()
     {
         bossIsDead = true;

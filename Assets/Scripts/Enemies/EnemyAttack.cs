@@ -32,7 +32,6 @@ public class EnemyAttack : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, target.position);
 
-        // Nếu player gần đủ tầm đánh
         if (distance <= attackRange)
         {
             if (Time.time >= lastAttackTime + attackCooldown)
@@ -43,9 +42,6 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Damage được gọi đúng lúc bởi Animation Event
-    /// </summary>
     public void DealDamage()
     {
         if (target == null) return;

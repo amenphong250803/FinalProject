@@ -18,10 +18,6 @@ public class PlayerPotionHandler : MonoBehaviour
     private void Awake()
     {
         health = GetComponent<Entity_Health>();
-        if (health == null)
-        {
-            Debug.LogError("PlayerPotionHandler: Không tìm thấy Entity_Health trên player!");
-        }
 
         UpdatePotionUI();
     }
@@ -41,8 +37,6 @@ public class PlayerPotionHandler : MonoBehaviour
         if (currentPotions > maxPotions)
             currentPotions = maxPotions;
 
-        Debug.Log($"Nhặt bình máu, hiện có: {currentPotions}");
-
         UpdatePotionUI();
     }
 
@@ -52,20 +46,16 @@ public class PlayerPotionHandler : MonoBehaviour
 
         if (currentPotions <= 0)
         {
-            Debug.Log("Không còn bình máu để dùng!");
             return;
         }
 
         if (health.IsDead)
         {
-            Debug.Log("Chết rồi thì uống gì nữa :))");
             return;
         }
 
         currentPotions--;
         health.Heal(healAmount);
-
-        Debug.Log($"Dùng 1 bình máu, còn lại: {currentPotions}");
 
         if (FloatingTextManager.Instance != null)
         {

@@ -5,7 +5,7 @@ public class EnemyHealth : Entity_Health
     Animator anim;
     EnemyPatrol patrol;
     Rigidbody2D rb;
-    EnemyCombat combat;   // ⭐ thêm combat
+    EnemyCombat combat;
 
     protected override void Awake()
     {
@@ -13,7 +13,7 @@ public class EnemyHealth : Entity_Health
         anim = GetComponentInChildren<Animator>();
 
         patrol = GetComponent<EnemyPatrol>();
-        combat = GetComponent<EnemyCombat>();  // ⭐ lấy combat
+        combat = GetComponent<EnemyCombat>();
 
         rb = GetComponent<Rigidbody2D>();
     }
@@ -36,29 +36,36 @@ public class EnemyHealth : Entity_Health
 
         base.Die(); // isDead = true
 
-        // ⭐ TẮT PATROL
+        EnemyKillReward reward = GetComponent<EnemyKillReward>();
+        if (reward != null)
+        {
+            reward.RewardKill();
+        }
+
+        PlayerProgression prog = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerProgression>();
+        if (prog != null)
+        {
+            prog.AddKill();
+        }
+
         if (patrol != null)
         {
             patrol.StopMoving();
             patrol.enabled = false;
         }
 
-        // ⭐ TẮT COMBAT
         if (combat != null)
             combat.enabled = false;
 
-        // ⭐ DỪNG CHUYỂN ĐỘNG
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
         }
 
-        // ⭐ RESET ANIM
         anim.ResetTrigger("attack");
         anim.ResetTrigger("hurt");
         anim.SetTrigger("dead");
 
-        Debug.Log("Enemy Died");
     }
 }

@@ -16,7 +16,6 @@ public class PauseMenuManager : MonoBehaviour
 
     private void Update()
     {
-        // Bấm ESC để bật/tắt menu
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -32,7 +31,7 @@ public class PauseMenuManager : MonoBehaviour
         if (pauseMenuPanel != null)
             pauseMenuPanel.SetActive(true);
 
-        Time.timeScale = 0f; // dừng game
+        Time.timeScale = 0f;
     }
 
     public void ResumeGame()
@@ -41,21 +40,18 @@ public class PauseMenuManager : MonoBehaviour
         if (pauseMenuPanel != null)
             pauseMenuPanel.SetActive(false);
 
-        Time.timeScale = 1f; // chạy lại game
+        Time.timeScale = 1f;
     }
 
     public void OnSaveAndExit()
     {
-        // 1. Lưu game
         if (playerSaveController != null)
         {
             playerSaveController.SaveGame();
         }
 
-        // 2. Reset time scale về bình thường
         Time.timeScale = 1f;
 
-        // 3. Về MainMenu
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }

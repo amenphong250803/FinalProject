@@ -11,17 +11,15 @@ public class BossHealth : Entity_Health
     public BossTargetDetection detectMusic;
 
     [Header("SFX")]
-    public AudioSource audioSource;     // ⭐ Gắn AudioSource của boss
-    public AudioClip deathSFX;          // ⭐ Âm thanh boss chết
-
-    private bool deathSoundPlayed = false;  // ⭐ Ngăn chơi lại SFX
+    public AudioSource audioSource;
+    public AudioClip deathSFX;
+    private bool deathSoundPlayed = false;
 
     protected override void Awake()
     {
         base.Awake();
         anim = GetComponentInChildren<Animator>();
 
-        // Nếu bạn quên gán AudioSource → thử tìm trong con
         if (audioSource == null)
         {
             audioSource = GetComponentInChildren<AudioSource>();
@@ -41,33 +39,23 @@ public class BossHealth : Entity_Health
         base.Die();
         anim.SetTrigger("dead");
 
-        PlayDeathSFX();   // 🔊 CHƠI ÂM THANH BOSS CHẾT
+        PlayDeathSFX();
 
         if (detectMusic != null)
         {
             detectMusic.OnBossDead();
         }
-        else
-        {
-            Debug.LogWarning("BossHealth: detectMusic chưa được gán trong Inspector!");
-        }
+
     }
 
-    // =============================
-    //        🔊 SFX DEATH
-    // =============================
     private void PlayDeathSFX()
     {
-        if (deathSoundPlayed) return;       // tránh lặp
+        if (deathSoundPlayed) return; 
         if (audioSource == null || deathSFX == null) return;
 
         audioSource.PlayOneShot(deathSFX);
         deathSoundPlayed = true;
     }
-
-    // =============================
-    //  HP BAR FUNCTIONS (giữ nguyên)
-    // =============================
 
     public void SetImmune(bool value)
     {

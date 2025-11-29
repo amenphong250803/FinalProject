@@ -28,21 +28,18 @@ public class EnemyAI : MonoBehaviour
     {
         float distance = Vector2.Distance(transform.position, player.position);
 
-        // ➤ Attack
         if (distance <= attackRange)
         {
             Attack();
             return;
         }
 
-        // ➤ Chase
         if (distance <= chaseRange)
         {
             Chase();
             return;
         }
 
-        // ➤ Patrol
         Patrol();
     }
 
@@ -90,7 +87,6 @@ public class EnemyAI : MonoBehaviour
 
         anim.Play("Minotaur_ATTACK");
 
-        // Gây dame
         Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, LayerMask.GetMask("Player"));
         if (hit)
         {

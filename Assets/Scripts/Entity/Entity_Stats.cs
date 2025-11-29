@@ -12,13 +12,12 @@ public class Entity_Stats : MonoBehaviour
     {
         float baseHp = maxHp.GetValue();
         float bonusHp = major.vitality.GetValue() * 5f;
-
         return baseHp + bonusHp;
     }
 
     public float GetDamage()
     {
-        return damage.GetValue();
+        return damage.GetValue() + major.strength.GetValue();
     }
 
     public float GetVitalityTotal()
@@ -30,4 +29,15 @@ public class Entity_Stats : MonoBehaviour
     {
         major.vitality.SetBaseValue(totalVitality);
     }
+
+    public float GetStrengthTotal()
+    {
+        return major.strength.GetValue();
+    }
+
+    public void SetStrengthFromSave(float totalStrength)
+    {
+        major.strength.SetBaseValue(totalStrength);
+    }
 }
+

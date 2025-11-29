@@ -6,10 +6,10 @@ public class BossLaserAttack : MonoBehaviour
     public GameObject laserObject;
 
     [Header("Timing Settings")]
-    public float initialDelay = 20f;    // Chờ trước lần đầu
-    public float chargeTime = 3f;    // Laser_Charge
-    public float beamTime = 2f;        // Laser_Beam
-    public float cooldown = 12f;        // Nghỉ giữa các lần bắn
+    public float initialDelay = 20f;
+    public float chargeTime = 3f;
+    public float beamTime = 2f;
+    public float cooldown = 12f;
 
     private Animator anim;
 
@@ -22,7 +22,6 @@ public class BossLaserAttack : MonoBehaviour
         anim = laserObject.GetComponent<Animator>();
         laserObject.SetActive(false);
 
-        // Sau initialDelay, laser mới bắt đầu charge
         nextActionTime = Time.time + initialDelay;
     }
 
@@ -56,9 +55,7 @@ public class BossLaserAttack : MonoBehaviour
         state = LaserState.Charging;
         laserObject.SetActive(true);
         anim.Play("Laser_Charge");
-        Debug.Log("⚡ Laser charging...");
 
-        // Charge xong thì sang BEAM
         nextActionTime = Time.time + chargeTime;
     }
 
@@ -66,9 +63,7 @@ public class BossLaserAttack : MonoBehaviour
     {
         state = LaserState.Firing;
         anim.Play("Laser_Beam");
-        Debug.Log("🔥 Laser beam active!");
 
-        // Beam xong thì STOP
         nextActionTime = Time.time + beamTime;
     }
 
@@ -76,15 +71,12 @@ public class BossLaserAttack : MonoBehaviour
     {
         state = LaserState.Cooldown;
         laserObject.SetActive(false);
-        Debug.Log("❄ Laser off");
 
-        // Đợi cooldown trước khi beam lại
         nextActionTime = Time.time + cooldown;
     }
 
     void ResetLaserCycle()
     {
         state = LaserState.Idle;
-        Debug.Log("🔁 Laser cooldown done → ready again");
     }
 }

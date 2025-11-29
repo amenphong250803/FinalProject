@@ -4,27 +4,25 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 8f;
     public int damage = 10;
-    public float lifeTime = 3f;  // sau 3s tự tắt
+    public float lifeTime = 3f;
 
     private Vector2 direction = Vector2.right;
     private float lifeTimer;
 
     private void OnEnable()
     {
-        // Reset thời gian sống mỗi lần bật lại bullet
         lifeTimer = 0f;
     }
 
     private void Update()
     {
-        // Di chuyển theo hướng đã set
         transform.Translate(direction * speed * Time.deltaTime);
 
         // Đếm thời gian tồn tại
         lifeTimer += Time.deltaTime;
         if (lifeTimer >= lifeTime)
         {
-            gameObject.SetActive(false);  // không Destroy, để tái sử dụng
+            gameObject.SetActive(false);
         }
     }
 
@@ -35,7 +33,6 @@ public class Bullet : MonoBehaviour
 
         direction = dir.normalized;
 
-        // Option: flip sprite theo hướng X (nếu bạn muốn)
         Vector3 scale = transform.localScale;
         scale.x = Mathf.Abs(scale.x) * Mathf.Sign(direction.x);
         transform.localScale = scale;
@@ -43,7 +40,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Gây damage lên player
+
         if (other.CompareTag("Player"))
         {
             Entity_Health hp = other.GetComponent<Entity_Health>();
@@ -56,7 +53,6 @@ public class Bullet : MonoBehaviour
         }
         else if (other.CompareTag("Ground"))
         {
-            // Đụng tường/ground thì tắt
             gameObject.SetActive(false);
         }
     }

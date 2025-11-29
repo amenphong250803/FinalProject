@@ -4,9 +4,8 @@ public class BossController : MonoBehaviour
 {
     private Animator anim;
     private BossHealth hp;
-    private BossAttackZone zone;       // ⭐ Zone Donut mới thêm
+    private BossAttackZone zone;
 
-    // Attack Timers
     private float attackTimer = 4f;
     private float rangedTimer = 8f;
     private float lazerTimer = 15f;
@@ -24,7 +23,7 @@ public class BossController : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         hp = GetComponent<BossHealth>();
-        zone = GetComponent<BossAttackZone>();  // ⭐ lấy zone
+        zone = GetComponent<BossAttackZone>();
     }
 
     void Update()
@@ -35,12 +34,9 @@ public class BossController : MonoBehaviour
 
         UpdateImmuneTimer();
         UpdatePhases(hpPercent);
-        UpdateAttacks();     // ⭐ CHỈ SỬA CHỖ NÀY
+        UpdateAttacks();
     }
 
-    //----------------------------------------------
-    // IMMUNE SYSTEM GIỮ NGUYÊN
-    //----------------------------------------------
     void UpdateImmuneTimer()
     {
         if (!immuneCounting) return;
@@ -65,9 +61,6 @@ public class BossController : MonoBehaviour
         immuneCounting = true;
     }
 
-    //----------------------------------------------
-    // PHASE 2 – LASER + IMMUNE + HEAL GIỮ NGUYÊN
-    //----------------------------------------------
     void UpdatePhases(float hpPercent)
     {
         if (hpPercent <= 0.5f && !immuneUsed)
@@ -84,19 +77,13 @@ public class BossController : MonoBehaviour
         }
     }
 
-    //----------------------------------------------
-    // ⭐⭐ HỆ THỐNG ĐÒN ĐÁNH THEO DONUT ZONE ⭐⭐
-    //----------------------------------------------
     void UpdateAttacks()
     {
-        // Timers
+
         attackTimer -= Time.deltaTime;
         rangedTimer -= Time.deltaTime;
         lazerTimer -= Time.deltaTime;
 
-        //---------------------------------------------------
-        // 1. RED ZONE → MELEE ATTACK
-        //---------------------------------------------------
         if (zone.playerTooClose)
         {
             if (attackTimer <= 0f)
@@ -104,12 +91,9 @@ public class BossController : MonoBehaviour
                 anim.SetTrigger("attack");
                 attackTimer = 4f;
             }
-            return; // ⭐ Không bắn ranged
+            return;
         }
 
-        //---------------------------------------------------
-        // 2. YELLOW DONUT ZONE → RANGED ATTACK
-        //---------------------------------------------------
         if (zone.playerInRangedZone)
         {
             if (rangedTimer <= 0f)
@@ -117,12 +101,9 @@ public class BossController : MonoBehaviour
                 anim.SetTrigger("ranged");
                 rangedTimer = 8f;
             }
-            return; // ⭐ Không đánh melee
+            return;
         }
 
-        //---------------------------------------------------
-        // 3. OUTSIDE ZONE → CHỈ LASER HOẶC KHÔNG ATTACK
-        //---------------------------------------------------
         if (lazerUnlocked && lazerTimer <= 0f)
         {
             anim.SetTrigger("lazer");
@@ -130,6 +111,5 @@ public class BossController : MonoBehaviour
             return;
         }
 
-        // Không làm gì khi ngoài tầm tấn công
     }
 }

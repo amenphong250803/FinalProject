@@ -39,10 +39,10 @@ public class Player : Entity
     [Header("Audio Settings")]
     public AudioSource audioSource;   
 
-    public AudioClip jumpSFX;         // nhảy
-    public AudioClip dashSFX;         // dash
-    public AudioClip footstepSFX;     // chạy / đi bộ
-    public AudioClip deathSFX;        // chết
+    public AudioClip jumpSFX;
+    public AudioClip dashSFX;
+    public AudioClip footstepSFX;
+    public AudioClip deathSFX;     
 
     protected override void Awake()
     {

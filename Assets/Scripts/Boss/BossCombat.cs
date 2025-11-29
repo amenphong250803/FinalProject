@@ -15,8 +15,8 @@ public class BossCombat : MonoBehaviour
     private BossHealth bossHealth;
 
     [Header("SFX Settings")]
-    public AudioSource audioSource;     // nơi phát tiếng tấn công
-    public AudioClip attackSFX;         // tiếng tấn công của boss
+    public AudioSource audioSource;
+    public AudioClip attackSFX;
 
     void Awake()
     {
@@ -30,7 +30,7 @@ public class BossCombat : MonoBehaviour
 
         audioSource.playOnAwake = false;
         audioSource.loop = false;
-        audioSource.spatialBlend = 0;   // 2D sound
+        audioSource.spatialBlend = 0;
     }
 
     public void PerformAttack()
@@ -52,8 +52,6 @@ public class BossCombat : MonoBehaviour
             {
                 float finalDamage = damage * bossHealth.damageMultiplier;
                 hp.TakeDamage(finalDamage);
-
-                Debug.Log("Boss đánh trúng, gây damage: " + finalDamage);
             }
         }
 
@@ -70,7 +68,6 @@ public class BossCombat : MonoBehaviour
     {
         if (attackPoint == null)
         {
-            Debug.LogError("❌ AttackPoint chưa được gán!");
             return;
         }
 
