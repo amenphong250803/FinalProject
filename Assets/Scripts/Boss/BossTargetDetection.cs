@@ -14,6 +14,36 @@ public class BossTargetDetection : MonoBehaviour
 
     public bool HasTarget => player != null;
 
+    void Start()
+    {
+        if (player == null)
+        {
+            var p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) player = p.transform;
+        }
+
+        if (HasTarget)
+        {
+            distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+            if (distanceToPlayer <= triggerDistance)
+            {
+                bossMusicPlaying = true;
+                BGMManager.Instance.FadeTo(bossBGM, 0f); 
+            }
+            else
+            {
+                bossMusicPlaying = false;
+                BGMManager.Instance.FadeTo(normalBGM, 0f); 
+            }
+        }
+        else
+        {
+            bossMusicPlaying = false;
+            BGMManager.Instance.FadeTo(normalBGM, 0f);
+        }
+    }
+
     void Update()
     {
         if (bossIsDead) return;
