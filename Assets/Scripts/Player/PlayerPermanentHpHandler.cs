@@ -16,6 +16,11 @@ public class PlayerPermanentHpHandler : MonoBehaviour
     [Header("Current state")]
     public int currentPermanentItems = 0;
 
+    [Header("SFX")]
+    public AudioSource audioSource;
+    public AudioClip useSfx;
+    public AudioClip addSfx;
+
     private void Awake()
     {
         stats = GetComponent<Entity_Stats>();
@@ -36,6 +41,10 @@ public class PlayerPermanentHpHandler : MonoBehaviour
         currentPermanentItems += amount;
         if (currentPermanentItems > maxPermanentItems)
             currentPermanentItems = maxPermanentItems;
+
+        if (audioSource != null && addSfx != null)
+            audioSource.PlayOneShot(addSfx);
+
         UpdatePotionUI();
     }
 
@@ -48,8 +57,10 @@ public class PlayerPermanentHpHandler : MonoBehaviour
 
         currentPermanentItems--;
 
-        float oldMaxHp = stats.GetMaxHealth();
+        if (audioSource != null && useSfx != null)
+            audioSource.PlayOneShot(useSfx);
 
+        float oldMaxHp = stats.GetMaxHealth();
         stats.major.vitality.AddModifier(bonusVitality);
 
         float newMaxHp = stats.GetMaxHealth();
@@ -66,6 +77,7 @@ public class PlayerPermanentHpHandler : MonoBehaviour
                 new Color(0.3f, 0.9f, 1f)
             );
         }
+
         UpdatePotionUI();
     }
 
