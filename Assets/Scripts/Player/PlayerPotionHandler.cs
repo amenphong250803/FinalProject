@@ -15,10 +15,14 @@ public class PlayerPotionHandler : MonoBehaviour
     [Header("Current state")]
     public int currentPotions = 0;
 
+    [Header("SFX")]
+    public AudioSource audioSource;
+    public AudioClip useSfx;
+    public AudioClip addSfx;
+
     private void Awake()
     {
         health = GetComponent<Entity_Health>();
-
         UpdatePotionUI();
     }
 
@@ -33,9 +37,11 @@ public class PlayerPotionHandler : MonoBehaviour
     public void AddPotion(int amount)
     {
         currentPotions += amount;
-
         if (currentPotions > maxPotions)
             currentPotions = maxPotions;
+
+        if (audioSource != null && addSfx != null)
+            audioSource.PlayOneShot(addSfx);
 
         UpdatePotionUI();
     }
@@ -43,18 +49,14 @@ public class PlayerPotionHandler : MonoBehaviour
     private void UsePotion()
     {
         if (health == null) return;
-
-        if (currentPotions <= 0)
-        {
-            return;
-        }
-
-        if (health.IsDead)
-        {
-            return;
-        }
+        if (currentPotions <= 0) return;
+        if (health.IsDead) return;
 
         currentPotions--;
+
+        if (audioSource != null && useSfx != null)
+            audioSource.PlayOneShot(useSfx);
+
         health.Heal(healAmount);
 
         if (FloatingTextManager.Instance != null)
