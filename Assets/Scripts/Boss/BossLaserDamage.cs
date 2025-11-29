@@ -44,7 +44,6 @@ public class BossLaserDamage : MonoBehaviour
             if (h.TryGetComponent(out Entity_Health hp))
             {
                 hp.TakeDamage(damage);
-                Debug.Log("🔥 Laser HIT! Damage = " + damage);
             }
         }
     }

@@ -5,8 +5,7 @@ public class BossBulletPool : MonoBehaviour
     public static BossBulletPool intan;
 
     [Header("Đặt sẵn danh sách bullet vào đây")]
-    public GameObject[] bullets;  // array do bạn tự kéo vào
-
+    public GameObject[] bullets;
     private void Awake()
     {
         intan = this;

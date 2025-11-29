@@ -24,7 +24,7 @@ public class BossMovement : MonoBehaviour
         detect = GetComponent<BossTargetDetection>();
         rb = GetComponent<Rigidbody2D>();
         hp = GetComponent<BossHealth>();
-        anim = GetComponentInChildren<Animator>(); // ⭐ LẤY ANIM CHILD
+        anim = GetComponentInChildren<Animator>();
 
         startPosition = transform.position;
     }

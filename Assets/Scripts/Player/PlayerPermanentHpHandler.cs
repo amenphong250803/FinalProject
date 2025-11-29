@@ -20,11 +20,6 @@ public class PlayerPermanentHpHandler : MonoBehaviour
     {
         stats = GetComponent<Entity_Stats>();
         health = GetComponent<Entity_Health>();
-
-        if (stats == null || health == null)
-        {
-            Debug.LogError("PlayerPermanentHpHandler: thiếu Entity_Stats hoặc Entity_Health!");
-        }
         UpdatePotionUI();
     }
 
@@ -41,8 +36,6 @@ public class PlayerPermanentHpHandler : MonoBehaviour
         currentPermanentItems += amount;
         if (currentPermanentItems > maxPermanentItems)
             currentPermanentItems = maxPermanentItems;
-
-        Debug.Log($"Nhặt bình tăng HP, hiện có: {currentPermanentItems}");
         UpdatePotionUI();
     }
 
@@ -50,7 +43,6 @@ public class PlayerPermanentHpHandler : MonoBehaviour
     {
         if (currentPermanentItems <= 0)
         {
-            Debug.Log("Không còn bình tăng HP để dùng!");
             return;
         }
 
@@ -66,13 +58,12 @@ public class PlayerPermanentHpHandler : MonoBehaviour
 
         health.IncreaseMaxHpAndHeal(addedHp);
 
-        Debug.Log($"Dùng bình tăng HP: MaxHP {oldMaxHp} → {newMaxHp} (+{addedHp})");
         if (FloatingTextManager.Instance != null)
         {
             FloatingTextManager.Instance.ShowText(
                 $"+{addedHp} HP (permanent)",
                 transform.position + Vector3.up * 1.5f,
-                new Color(0.3f, 0.9f, 1f) // xanh cyan
+                new Color(0.3f, 0.9f, 1f)
             );
         }
         UpdatePotionUI();

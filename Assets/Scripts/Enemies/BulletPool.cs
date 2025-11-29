@@ -29,7 +29,6 @@ public class BulletPool : MonoBehaviour
                 return pool[i];
         }
 
-        // nếu hết bullet → tạo thêm
         GameObject extra = Instantiate(bulletPrefab);
         extra.SetActive(false);
         return extra;

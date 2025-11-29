@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 393510624829978710}
   - component: {fileID: 2899594125655039988}
   - component: {fileID: 2992539734593092070}
+  - component: {fileID: 7918475190093179427}
   m_Layer: 7
   m_Name: Enemy Attacked
   m_TagString: Enemy
@@ -555,6 +556,19 @@ MonoBehaviour:
     m_Bits: 8
   audioSource: {fileID: 0}
   hitSFX: {fileID: 8300000, guid: 74644bacbe079364fa2feee867d362e4, type: 3}
+--- !u!114 &7918475190093179427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8196883752998155426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c1dc3bdb6e23a43b64ff776ef946db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killValue: 1
 --- !u!1001 &8438656267934525318
 PrefabInstance:
   m_ObjectHideFlags: 0

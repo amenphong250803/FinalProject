@@ -20,10 +20,8 @@ public class FloatingTextManager : MonoBehaviour
         if (floatingTextPrefab == null || mainCanvas == null)
             return;
 
-        // Chuyển vị trí world → screen
         Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);
 
-        // spawn text dưới Canvas
         FloatingText ft = Instantiate(floatingTextPrefab, mainCanvas.transform);
         ft.transform.position = screenPos;
         ft.Setup(message, color);

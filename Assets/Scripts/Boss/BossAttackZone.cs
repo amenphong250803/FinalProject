@@ -3,14 +3,14 @@
 public class BossAttackZone : MonoBehaviour
 {
     [Header("Donut Attack Zone")]
-    public float innerRadius = 3f;     // Zone gần → chỉ melee
-    public float outerRadius = 7f;     // Zone xa → ranged
+    public float innerRadius = 3f;
+    public float outerRadius = 7f;
 
     private BossTargetDetection detect;
 
     [Header("Zone Status (Debug)")]
-    public bool playerTooClose = false;   // Melee attack zone
-    public bool playerInRangedZone = false; // Donut zone
+    public bool playerTooClose = false;
+    public bool playerInRangedZone = false;
 
     void Awake()
     {
@@ -28,19 +28,17 @@ public class BossAttackZone : MonoBehaviour
 
         float dist = detect.distanceToPlayer;
 
-        // Vùng Melee (gần)
         playerTooClose = dist <= innerRadius;
 
-        // Vùng Ranged (donut)
         playerInRangedZone = dist > innerRadius && dist <= outerRadius;
     }
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;      // Melee zone
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, innerRadius);
 
-        Gizmos.color = Color.yellow;   // Ranged zone
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, outerRadius);
     }
 }

@@ -14,18 +14,15 @@ public class Player_DashState : PlayerState
     {
         base.Enter();
 
-        // ⭐ PHÁT ÂM DASH ⭐
         player.PlayDashSFX();
 
         if (health != null)
             health.SetInvulnerable(true);
 
-        // hướng dash
         dashDir = player.moveInput.x != 0 ? ((int)player.moveInput.x) : player.facingDir;
 
         stateTimer = player.dashDuration;
 
-        // tắt gravity khi dash
         originalGravityScale = rb.gravityScale;
         rb.gravityScale = 0;
     }
@@ -34,10 +31,8 @@ public class Player_DashState : PlayerState
     {
         base.Update();
 
-        // giữ vận tốc dash
         player.SetVelocity(player.dashSpeed * dashDir, 0);
 
-        // hết thời gian dash → chuyển state
         if (stateTimer < 0)
         {
             if (player.groundDetected)
@@ -56,7 +51,6 @@ public class Player_DashState : PlayerState
 
         player.SetVelocity(0, 0);
 
-        // trả lại gravity
         rb.gravityScale = originalGravityScale;
     }
 }

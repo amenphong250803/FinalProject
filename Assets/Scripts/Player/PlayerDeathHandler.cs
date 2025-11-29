@@ -13,8 +13,6 @@ public class PlayerDeathHandler : MonoBehaviour
         if (health == null)
             health = GetComponent<Entity_Health>();
 
-        if (gameOverUI == null)
-            Debug.LogError("PlayerDeathHandler: CHƯA gán GameOverUI trong Inspector!");
     }
 
     private void Update()

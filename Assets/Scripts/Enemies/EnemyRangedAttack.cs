@@ -45,7 +45,6 @@ public class EnemyRangedAttack : MonoBehaviour
 
         if (!detect || !zone) return;
 
-        // ❌ PLAYER RỜI ZONE → trở lại patrol
         if (!zone.playerInRangedZone)
         {
             if (wasInZone)
@@ -56,30 +55,22 @@ public class EnemyRangedAttack : MonoBehaviour
             return;
         }
 
-        // ✔ PLAYER TRONG ZONE
         wasInZone = true;
 
-        // ⭐ 1. DỪNG DI CHUYỂN NGAY LẬP TỨC
         if (patrol != null)
             patrol.StopPatrol();
 
-        // ⭐ 2. QUAY VỀ HƯỚNG PLAYER
         FlipTowardPlayer();
 
         if (!detect.HasTarget) return;
         if (Time.time < nextShootTime) return;
 
-        // ⭐ 3. BẮN ĐẠN
         anim.SetTrigger("attack");
         anim.SetBool("attack", true);
 
-        // đứng im trong lúc bắn → patrol đã stop
         nextShootTime = Time.time + cooldown;
     }
 
-    // =====================================================================
-    // ⭐ PLAYER RỜI ZONE → quay về patrol bình thường
-    // =====================================================================
     private void StopAttackAndResumePatrol()
     {
         anim.ResetTrigger("attack");
@@ -89,9 +80,6 @@ public class EnemyRangedAttack : MonoBehaviour
             patrol.ResumePatrol();
     }
 
-    // =====================================================================
-    // ⭐ QUAY HƯỚNG THEO PLAYER
-    // =====================================================================
     private void FlipTowardPlayer()
     {
         if (!detect.HasTarget || patrol == null) return;
@@ -103,12 +91,8 @@ public class EnemyRangedAttack : MonoBehaviour
         patrol.Flip(right ? 1 : -1);
     }
 
-    // =====================================================================
-    // ⭐ Animation Event gọi hàm này để bắn đạn
-    // =====================================================================
     public void Shoot()
     {
-        // NGĂN BẮN KHI PLAYER RA KHỎI ZONE
         if (!zone.playerInRangedZone) return;
 
         if (!detect.HasTarget) return;

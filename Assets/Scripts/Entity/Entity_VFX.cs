@@ -12,8 +12,8 @@ public class Entity_VFX : MonoBehaviour
     private Coroutine onDamageVfxCoroutine;
 
     [Header("On Damage SFX")]
-    public AudioSource audioSource;       // nơi phát âm thanh
-    public AudioClip damageSFX;           // tiếng khi bị trúng đòn
+    public AudioSource audioSource;
+    public AudioClip damageSFX;
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class Entity_VFX : MonoBehaviour
 
         audioSource.playOnAwake = false;
         audioSource.loop = false;
-        audioSource.spatialBlend = 0; // 2D sound
+        audioSource.spatialBlend = 0;
     }
 
     public void PlayOnDamageVfx()

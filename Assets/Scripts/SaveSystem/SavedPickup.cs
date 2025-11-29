@@ -11,7 +11,6 @@ public class SavedPickup : MonoBehaviour
     {
         if (string.IsNullOrEmpty(pickupId))
         {
-            Debug.LogWarning($"SavedPickup trên {name}: chưa set pickupId!");
             return;
         }
 

@@ -15,10 +15,6 @@ public class PauseMenuUI : MonoBehaviour
         {
             playerSaveController.SaveGame();
         }
-        else
-        {
-            Debug.LogWarning("PauseMenuUI: Chưa gán PlayerSaveController!");
-        }
 
         Time.timeScale = 1f;
 

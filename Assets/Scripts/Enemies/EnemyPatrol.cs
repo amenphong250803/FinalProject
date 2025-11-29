@@ -22,7 +22,7 @@ public class EnemyPatrol : MonoBehaviour
     private bool isIdle = false;
     public bool canMove = true;
 
-    private int defaultDirection = 1;   // ⭐ Hướng ban đầu
+    private int defaultDirection = 1;
 
     private void Awake()
     {
@@ -31,12 +31,9 @@ public class EnemyPatrol : MonoBehaviour
         if (model != null)
             anim = model.GetComponent<Animator>();
 
-        if (anim == null)
-            Debug.LogError("❌ EnemyPatrol: MODEL không có Animator! " + name);
 
         baseScale = model != null ? model.localScale : new Vector3(1, 1, 1);
 
-        // ⭐ Lưu hướng ban đầu
         defaultDirection = baseScale.x >= 0 ? 1 : -1;
     }
 
@@ -96,17 +93,11 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
-    // -----------------------------
-    // ⭐ Khi player rời zone → quay về hướng ban đầu
-    // -----------------------------
     public void FaceDefaultDirection()
     {
         Flip(defaultDirection);
     }
 
-    // -----------------------------
-    // ⭐ Khi patrol hoạt động lại → quay về hướng patrol
-    // -----------------------------
     public void FacePatrolDirection()
     {
         Flip(movingRight ? 1 : -1);
